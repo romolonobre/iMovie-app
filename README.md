@@ -55,9 +55,16 @@ This app provides users with details, reviews, videos, external links to watch s
 <img width="973" alt="Screenshot 2024-07-24 at 13 17 13" src="https://github.com/user-attachments/assets/3de7c0fb-c349-4e49-b077-2bb0ccf51bf6">
 
 
-## Biometric authetication
 
-https://github.com/user-attachments/assets/30644ba7-1923-45cc-9e47-c0c0b53c5ca5
+
+## Short Video recording 
+
+https://github.com/user-attachments/assets/c2047450-182c-4fe8-91d7-99a9519425f6
+
+
+
+
+
 
 
 
