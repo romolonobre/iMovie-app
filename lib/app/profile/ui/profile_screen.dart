@@ -47,12 +47,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   left: 0,
                   child: Column(
                     children: [
-                      IUIText.heading(
-                        "Profile",
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                        fontsize: 20,
-                      ),
                       const SizedBox(height: 10),
                       CircleAvatar(
                         radius: 73,
