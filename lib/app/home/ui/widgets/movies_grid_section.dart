@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:imovie_app/app/_commons/extensions/extensions.dart';
-import 'package:imovie_app/app/_commons/imovie_ui/iui_grid_view.dart';
 import 'package:shimmer/shimmer.dart';
 
 import '../../../_commons/imovie_ui/iui_text.dart';
 import '../../data/movies_service.dart';
 import '../../interactor/states/movies_state.dart';
-import 'imdb_review_widget.dart';
 
 class MoviesGridSection extends StatelessWidget {
   final String sectionTitle;
@@ -71,70 +69,90 @@ class MoviesGridSection extends StatelessWidget {
             if (state is MoviesLoadedState)
               SizedBox(
                 height: height,
-                child: IUIGridView(
-                  crossAxisSpacing: 8.0,
-                  mainAxisExtent: width,
-                  itemCount: state.movies.length,
-                  itemBuilder: (context, index) {
-                    final movie = state.movies[index];
-                    return GestureDetector(
-                      onTap: () => Modular.to.pushNamed('./details', arguments: movie.id),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          //
-                          // Movie Image
-                          Expanded(
-                            child: Material(
-                              elevation: 10,
-                              borderRadius: BorderRadius.circular(8),
-                              child: Container(
-                                decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                    image: NetworkImage(movie.postImage),
-                                    fit: BoxFit.cover,
-                                  ),
-                                  borderRadius: BorderRadius.circular(8.0),
-                                ),
-                              ),
-                            ),
-                          ),
-                          const SizedBox(height: 8.0),
-                          SizedBox(
-                            child: Row(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                //
-                                // Movie Name
-                                Flexible(
-                                  child: IUIText.heading(
-                                    movie.title,
-                                    fontsize: 12,
-                                    overflow: TextOverflow.ellipsis,
-                                    maxLines: 2,
-                                  ),
-                                ),
-                                const SizedBox(width: 5),
 
-                                //
-                                // IMDB icon
-                                ImdbReviewWidget(review: movie.voteAverage),
-                              ],
-                            ),
-                          ),
-
-                          // Release Date
-                          IUIText.heading(
-                            movie.releaseDate.getYear(),
-                            fontsize: 12,
-                            color: Colors.blueGrey,
-                          )
-                        ],
-                      ),
-                    ).paddingOnly(left: index == 0 ? 20 : 0);
+                child: CarouselView(
+                  itemExtent: 150,
+                  itemSnapping: true,
+                  onTap: (index) {
+                    final movie = state.movies[index]; // Access the movie using the index
+                    Modular.to.pushNamed('./details', arguments: movie.id);
                   },
+                  children: [
+                    ...state.movies.map(
+                      (e) {
+                        return Image.network(
+                          e.postImage,
+                          fit: BoxFit.cover,
+                        );
+                      },
+                    ),
+                  ],
                 ),
+
+                // child: IUIGridView(
+                //   crossAxisSpacing: 8.0,
+                //   mainAxisExtent: width,
+                //   itemCount: state.movies.length,
+                //   itemBuilder: (context, index) {
+                //     final movie = state.movies[index];
+                //     return GestureDetector(
+                //       onTap: () => Modular.to.pushNamed('./details', arguments: movie.id),
+                //       child: Column(
+                //         crossAxisAlignment: CrossAxisAlignment.start,
+                //         children: [
+                //           //
+                //           // Movie Image
+                //           Expanded(
+                //             child: Material(
+                //               elevation: 10,
+                //               borderRadius: BorderRadius.circular(8),
+                //               child: Container(
+                //                 decoration: BoxDecoration(
+                //                   image: DecorationImage(
+                //                     image: NetworkImage(movie.postImage),
+                //                     fit: BoxFit.cover,
+                //                   ),
+                //                   borderRadius: BorderRadius.circular(8.0),
+                //                 ),
+                //               ),
+                //             ),
+                //           ),
+                //           const SizedBox(height: 8.0),
+                //           SizedBox(
+                //             child: Row(
+                //               crossAxisAlignment: CrossAxisAlignment.start,
+                //               children: [
+                //                 //
+                //                 // Movie Name
+                //                 Flexible(
+                //                   child: IUIText.heading(
+                //                     movie.title,
+                //                     fontsize: 12,
+                //                     overflow: TextOverflow.ellipsis,
+                //                     maxLines: 2,
+                //                   ),
+                //                 ),
+                //                 const SizedBox(width: 5),
+
+                //                 //
+                //                 // IMDB icon
+                //                 ImdbReviewWidget(review: movie.voteAverage),
+                //               ],
+                //             ),
+                //           ),
+
+                //           // Release Date
+                //           IUIText.heading(
+                //             movie.releaseDate.getYear(),
+                //             fontsize: 12,
+                //             color: Colors.blueGrey,
+                //           )
+                //         ],
+                //       ),
+                //     ).paddingOnly(left: index == 0 ? 20 : 0);
+                //   },
               ),
+            // ),
           ],
         );
       },
