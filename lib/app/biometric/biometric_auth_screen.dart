@@ -24,10 +24,10 @@ class _BiometricAuthScreenState extends State<BiometricAuthScreen> {
   @override
   void initState() {
     super.initState();
-    Future(() => _handleAuht());
+    Future(() => _authenticateWithBiometrics());
   }
 
-  _handleAuht() async {
+  _authenticateWithBiometrics() async {
     final state = await _auth.authenticateWithBiometrics();
     if (!mounted) return;
     if (state is BiometricsAuthErrorState) {
@@ -65,7 +65,7 @@ class _BiometricAuthScreenState extends State<BiometricAuthScreen> {
             IUIButtons.text(
               label: "Tap to Log in with Biometrics",
               width: MediaQuery.sizeOf(context).width - 100,
-              onPressed: () async => await _handleAuht(),
+              onPressed: () async => await _authenticateWithBiometrics(),
             ),
 
             // Button to navigate to the login screen if there is an issue with Biometrics
