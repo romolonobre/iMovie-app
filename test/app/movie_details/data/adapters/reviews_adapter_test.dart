@@ -5,7 +5,6 @@ import 'package:imovie_app/app/movie_details/data/adapters/reviews_adapter.dart'
 void main() {
   group('ReviewsAdapter', () {
     test('fromJson returns a valid Review object', () {
-      final adapter = ReviewsAdapter();
       final json = {
         'author_details': {
           'username': 'Reviewer1',
@@ -16,7 +15,7 @@ void main() {
         'created_at': '2023-07-17T12:34:56.000Z',
       };
 
-      final review = adapter.fromJson(json);
+      final review = ReviewsAdapter().fromJson(json);
 
       expect(review.name, 'Reviewer1');
       expect(review.content, 'Great movie!');
@@ -26,7 +25,6 @@ void main() {
     });
 
     test('fromJsonToList returns a list of Review objects', () {
-      final adapter = ReviewsAdapter();
       final json = {
         'results': [
           {
@@ -50,7 +48,7 @@ void main() {
         ]
       };
 
-      final reviews = adapter.fromJsonToList(json);
+      final reviews = ReviewsAdapter().fromJsonToList(json);
 
       expect(reviews.length, 2);
       expect(reviews[0].name, 'Reviewer1');
@@ -66,8 +64,7 @@ void main() {
     });
 
     test('fromJsonToList returns an empty list if json is null', () {
-      final adapter = ReviewsAdapter();
-      final reviews = adapter.fromJsonToList(null);
+      final reviews = ReviewsAdapter().fromJsonToList(null);
 
       expect(reviews, isEmpty);
     });
