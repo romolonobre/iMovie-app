@@ -1,6 +1,6 @@
 import 'dart:convert';
-import 'dart:developer';
 
+import 'package:flutter/material.dart';
 import 'package:http/http.dart';
 
 import 'error_handle.dart';
@@ -13,11 +13,10 @@ class TMDBApiResponse {
   dynamic data;
 
   TMDBApiResponse(this.response) {
-    log(''' 
+    debugPrint('''
   --------- API RESPONSE ---------
   Request Fingerprint: ${fingerPrint.millisecondsSinceEpoch}
   Status Code: ${response?.statusCode}
-  Headers: ${response?.headers}
   --------------------------------''');
 
     try {

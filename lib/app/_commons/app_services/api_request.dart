@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
@@ -20,11 +19,12 @@ class APIRequest {
     String endpoint, {
     Map<String, String>? headers,
   }) {
-    log('''  --------- API REQUEST ---------
+    debugPrint('''  --------- API REQUEST ---------
   Request Fingerprint: ${fingerPrint.millisecondsSinceEpoch}
   Method: get
   URL: $endpoint
   --------------------------------''');
+
     return http.get(
       Uri.parse("$baseUrl$endpoint"),
       headers: requestHeaders,
@@ -37,7 +37,7 @@ class APIRequest {
     Map<String, String>? headers,
     Map<String, dynamic>? body,
   }) {
-    log('''  --------- API REQUEST ---------
+    debugPrint('''  --------- API REQUEST ---------
   Request Fingerprint: ${fingerPrint.millisecondsSinceEpoch}
   Method: post
   URL: $endpoint
