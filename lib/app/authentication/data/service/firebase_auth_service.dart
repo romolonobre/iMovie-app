@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
@@ -128,9 +126,7 @@ class FirebaseAuthService implements AuthService {
         idToken: googleAuth.idToken,
       );
 
-      final a = await _auth.signInWithCredential(credential);
-
-      log(a.credential?.token.toString() ?? 'dsdsdsds');
+      await _auth.signInWithCredential(credential);
 
       return LoginSuccessState();
     } catch (e) {
