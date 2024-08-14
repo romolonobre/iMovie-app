@@ -8,7 +8,7 @@ class SerieController extends ValueNotifier<SeriesState> {
   SerieController(this.service) : super(IdleState());
 
   // This controller uses the State Pattern to return the appropriate state
-  // based on the API response. The result is obtained and emitted to the listenrs.
+  // based on the API response
 
   Future getSeries() async {
     _emit(SeriesLoadingState());

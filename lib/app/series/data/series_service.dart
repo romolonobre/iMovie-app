@@ -17,7 +17,6 @@ class SeriesService {
       if (response.hasError) {
         return SeriesErrorState(message: response.errorMessage);
       }
-
       final series = SerieAdapter().fromJsonToList(response.data);
 
       return SeriesLoadedState(series: series);

@@ -1,31 +1,28 @@
 // ignore_for_file: control_flow_in_finally
 
-import 'package:http/http.dart';
-import 'package:imovie_app/app/_commons/app_services/api_request.dart';
-
+import '../../_commons/app_services/api_request.dart';
 import '../../_commons/app_services/error_handle.dart';
 import '../../_commons/app_services/tmdb_api_response.dart';
+import 'serie_details_exceptions.dart';
 
 class SerieDetailsDatasource extends APIRequest {
   Future<TMDBApiResponse> getSeasons(String id, String seasonNumber) async {
-    Response? response;
     try {
-      response = await this.get("3/tv/$id/season/$seasonNumber");
+      final response = await get("3/tv/$id/season/$seasonNumber");
+      return TMDBApiResponse(response);
     } catch (error, stackTrace) {
       Errorhandler.report(error, stackTrace, tag: "@SerieDetailsDatasource getSeasons");
-    } finally {
-      return TMDBApiResponse(response);
+      throw SeasonsException(message: "Failed to get seasons: ${error.toString()}");
     }
   }
 
   Future<TMDBApiResponse> getSeasonVideos(String id, String seasonNumber) async {
-    Response? response;
     try {
-      response = await this.get("3/tv/$id/season/$seasonNumber/videos");
+      final response = await get("3/tv/$id/season/$seasonNumber/videos");
+      return TMDBApiResponse(response);
     } catch (error, stackTrace) {
       Errorhandler.report(error, stackTrace, tag: "@SerieDetailsDatasource getSeasonVideos");
-    } finally {
-      return TMDBApiResponse(response);
+      throw SeasonVideosException(message: "Failed to get season videos: ${error.toString()}");
     }
   }
 }

@@ -5,17 +5,17 @@ import 'package:imovie_app/app/_commons/app_services/api_request.dart';
 
 import '../../_commons/app_services/error_handle.dart';
 import '../../_commons/app_services/tmdb_api_response.dart';
+import 'series_errors.dart';
 
 class SeriesDatasource extends APIRequest {
   Future<TMDBApiResponse> getSeries() async {
     Response? response;
-
     try {
       response = await this.get("3/tv/on_the_air");
+      return TMDBApiResponse(response);
     } catch (error, stackTrace) {
       Errorhandler.report(error, stackTrace, tag: "@SeriesDatasource getSeries");
-    } finally {
-      return TMDBApiResponse(response);
+      throw SeriesException(message: "Failed to get series: ${error.toString()}");
     }
   }
 
@@ -23,10 +23,10 @@ class SeriesDatasource extends APIRequest {
     Response? response;
     try {
       response = await this.get("3/tv/$id");
+      return TMDBApiResponse(response);
     } catch (error, stackTrace) {
       Errorhandler.report(error, stackTrace, tag: "@SeriesDatasource getDetails");
-    } finally {
-      return TMDBApiResponse(response);
+      throw SerieDetailsException(message: "Failed to get series details: ${error.toString()}");
     }
   }
 }
