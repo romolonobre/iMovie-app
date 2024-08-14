@@ -17,7 +17,7 @@ class ReviewsPopupWidget extends StatelessWidget {
       cardTitle: "Reviews",
       cardSubtitle: '',
       visibleContent: IUIText.heading(
-        "See reviews (${reviews.length})",
+        "See reviews (${reviews.length})", //  Visible content on the screen "See reviews"
         fontsize: 14,
         color: Colors.amber,
       ),

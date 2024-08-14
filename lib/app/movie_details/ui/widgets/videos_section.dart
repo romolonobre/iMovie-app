@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:imovie_app/app/_commons/extensions/extensions.dart';
+import 'package:imovie_app/app/_commons/flutter_widgets/shimmer_loading.dart';
 
 import '../../../_commons/flutter_widgets/video_player_screen.dart';
 import '../../../_commons/imovie_ui/iui_grid_view.dart';
-import '../../../_commons/imovie_ui/iui_loader.dart';
 import '../../../_commons/imovie_ui/iui_text.dart';
 import '../../data/movie_details_service.dart';
 import '../../interactor/states/movie_details_state.dart';
@@ -43,7 +43,12 @@ class VideosSection extends StatelessWidget {
             ),
 
             // Loading state
-            if (snapshot.connectionState == ConnectionState.waiting) const IUILoader(size: 20),
+            if (snapshot.connectionState == ConnectionState.waiting)
+              ShimmerLoading(
+                width: MediaQuery.sizeOf(context).width / 3 - 20,
+                height: 70,
+                itemCount: 3,
+              ),
 
             //  Error state
             if (state is MoviesDetailsErrorState)
@@ -52,6 +57,8 @@ class VideosSection extends StatelessWidget {
                 color: Colors.red,
                 fontsize: 12,
               ),
+
+            // Movies Loaded state
             if (state is MovieVideosLoadedState)
               SizedBox(
                 height: 83,

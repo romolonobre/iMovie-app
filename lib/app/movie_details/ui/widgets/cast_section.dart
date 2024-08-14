@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:imovie_app/app/_commons/extensions/extensions.dart';
 import 'package:imovie_app/app/movie_details/interactor/states/movie_details_state.dart';
 
+import '../../../_commons/flutter_widgets/shimmer_loading.dart';
 import '../../../_commons/imovie_ui/iui_grid_view.dart';
-import '../../../_commons/imovie_ui/iui_loader.dart';
 import '../../../_commons/imovie_ui/iui_text.dart';
 import '../../data/movie_details_service.dart';
 
@@ -42,14 +42,22 @@ class CastSection extends StatelessWidget {
             ),
 
             // Loading state
-            if (snapshot.connectionState == ConnectionState.waiting) const IUILoader(size: 40),
+            if (snapshot.connectionState == ConnectionState.waiting)
+              ShimmerLoading(
+                width: MediaQuery.sizeOf(context).width / 5 - 12,
+                height: 80,
+                itemCount: 5,
+              ),
 
+            // Error state
             if (state is MoviesDetailsErrorState)
               IUIText.heading(
                 state.message,
                 color: Colors.red,
                 fontsize: 12,
               ),
+
+            // Cast Loaded state
             if (state is MovieCastLoadedState)
               SizedBox(
                 height: 120,

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:imovie_app/app/_commons/extensions/extensions.dart';
+import 'package:imovie_app/app/_commons/flutter_widgets/shimmer_loading.dart';
 
-import '../../../_commons/imovie_ui/iui_loader.dart';
 import '../../../_commons/imovie_ui/iui_text.dart';
 import '../../../_commons/movie/entities/movie.dart';
 import '../../data/movie_details_service.dart';
@@ -31,6 +31,8 @@ class MovieDetailsSection extends StatelessWidget {
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
+                //
+                // Image
                 ClipRRect(
                   borderRadius: BorderRadius.circular(20),
                   child: Container(
@@ -55,6 +57,8 @@ class MovieDetailsSection extends StatelessWidget {
                         children: [
                           IUIText.heading(movie.title, fontWeight: FontWeight.w800),
                           const SizedBox(width: 5),
+
+                          // Side Movie image
                           IUIText.heading(
                             "(${movie.releaseDate.getYear()})",
                             fontsize: 12,
@@ -63,6 +67,8 @@ class MovieDetailsSection extends StatelessWidget {
                         ],
                       ),
                       ImdbReviewWidget(review: movie.voteAverage),
+
+                      // Movie Descrition
                       const SizedBox(height: 10),
                       FittedBox(
                         child: SizedBox(
@@ -75,8 +81,14 @@ class MovieDetailsSection extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(height: 5),
+
                       // Loading state
-                      if (snapshot.connectionState == ConnectionState.waiting) const IUILoader(size: 20),
+                      if (snapshot.connectionState == ConnectionState.waiting)
+                        ShimmerLoading(
+                          width: 40,
+                          height: 18,
+                          itemCount: 4,
+                        ),
 
                       //Error state
                       if (state is MoviesDetailsErrorState)
@@ -86,6 +98,7 @@ class MovieDetailsSection extends StatelessWidget {
                           maxLines: 4,
                         ).paddingOnly(left: 20, right: 20),
 
+                      // Genre Loaded state
                       if (state is MovieGenreLoadedState)
                         Wrap(
                           direction: Axis.horizontal,

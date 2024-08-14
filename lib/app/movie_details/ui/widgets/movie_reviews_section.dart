@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:imovie_app/app/_commons/extensions/extensions.dart';
 import 'package:imovie_app/app/_commons/flutter_widgets/reviews_popup_widget.dart';
+import 'package:imovie_app/app/_commons/flutter_widgets/shimmer_loading.dart';
 
-import '../../../_commons/imovie_ui/iui_loader.dart';
 import '../../../_commons/imovie_ui/iui_text.dart';
 import '../../data/movie_details_service.dart';
 import '../../interactor/states/movie_details_state.dart';
@@ -24,7 +25,11 @@ class MovieReviewsSection extends StatelessWidget {
         //
         // Loading state
         if (snapshot.connectionState == ConnectionState.waiting) {
-          return const IUILoader(size: 10);
+          return ShimmerLoading(
+            width: 70,
+            height: 20,
+            itemCount: 1,
+          ).paddingOnly(right: 10);
         }
 
         //  Error state
@@ -36,6 +41,7 @@ class MovieReviewsSection extends StatelessWidget {
           );
         }
 
+        //Reviews Loaded state
         if (state is MovieReviewsLoadedState) {
           return ReviewsPopupWidget(reviews: state.reviews);
         }

@@ -35,12 +35,21 @@ class _EpisodesSectionState extends State<EpisodesSection> {
             SeasonSelector(
                 id: widget.id,
                 getSeasonNumber: (e) async {
-                  await controller.getSeasons(id: widget.id, seasonNumber: e.toString());
+                  await controller.getSeasons(
+                    id: widget.id,
+                    seasonNumber: e.toString(),
+                  );
                 }),
             const SizedBox(height: 20),
             //
             // Loading state
-            if (state is SeriesDetailsLoadingState) const ShimmerLoading(),
+            if (state is SeriesDetailsLoadingState)
+              ShimmerLoading(
+                width: MediaQuery.sizeOf(context).width - 50,
+                height: 70,
+                itemCount: 5,
+                direction: Axis.vertical,
+              ),
 
             //
             // Error state
@@ -55,11 +64,13 @@ class _EpisodesSectionState extends State<EpisodesSection> {
             if (state is SerieSeasonLoadedState)
               Column(
                 children: [
-                  ...state.seasons.map((season) {
-                    seasonNumber = season.seasonNumber.toString();
+                  ...state.seasons.map(
+                    (season) {
+                      seasonNumber = season.seasonNumber.toString();
 
-                    return EpisodeDetailsExpansionTile(season: season);
-                  }),
+                      return EpisodeDetailsExpansionTile(season: season);
+                    },
+                  ),
                 ],
               ),
             SeasonVideoSection(
