@@ -1,5 +1,5 @@
-import 'package:imovie_app/app/series/interactor/entities/serie_details.dart';
-import 'package:imovie_app/app/series/interactor/entities/series.dart';
+import 'entities/serie_details.dart';
+import 'entities/series.dart';
 
 abstract class SeriesState {}
 

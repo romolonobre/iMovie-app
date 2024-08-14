@@ -74,7 +74,7 @@ class PhotosSection extends StatelessWidget {
                         ),
                         const SizedBox(height: 4.0),
                       ],
-                    );
+                    ).paddingOnly(left: index == 0 ? 20 : 0);
                   },
                 ),
               ),

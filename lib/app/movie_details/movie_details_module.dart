@@ -13,6 +13,6 @@ class MovieDetailsModule extends Module {
 
   @override
   void routes(RouteManager r) {
-    r.child('/', child: (context) => MovieDetailsScreen(movie: r.args.data));
+    r.child('/', child: (context) => MovieDetailsScreen(id: r.args.data));
   }
 }

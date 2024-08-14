@@ -4,11 +4,11 @@ import 'package:imovie_app/app/_commons/app_services/cache.dart';
 import 'package:imovie_app/app/_commons/extensions/extensions.dart';
 
 import '../../_commons/app_services/utils.dart';
-import '../../_commons/entities/app_user.dart';
 import '../../_commons/flutter_widgets/imovie_textform_field.dart';
 import '../../_commons/imovie_ui/iui_buttons.dart';
 import '../../_commons/imovie_ui/iui_modal.dart';
 import '../../_commons/imovie_ui/iui_text.dart';
+import '../../_commons/user/entities/app_user.dart';
 import '../../authentication/interactor/login_controller.dart';
 import '../../authentication/interactor/login_state.dart';
 import 'widgets/profile_image.dart';
@@ -47,12 +47,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   left: 0,
                   child: Column(
                     children: [
-                      IUIText.heading(
-                        "Profile",
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                        fontsize: 20,
-                      ),
                       const SizedBox(height: 10),
                       CircleAvatar(
                         radius: 73,

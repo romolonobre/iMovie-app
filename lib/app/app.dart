@@ -8,11 +8,34 @@ class App extends StatefulWidget {
   State<App> createState() => _AppState();
 }
 
-class _AppState extends State<App> {
+class _AppState extends State<App> with WidgetsBindingObserver {
+  bool _wasInBackground = false;
+
   @override
   void initState() {
     super.initState();
     Modular.setInitialRoute("/splashscreen");
+    WidgetsBinding.instance.addObserver(this);
+  }
+
+  // Restart the app when resumed from the background
+  // This ensures biometric authentication is prompted
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    if (state == AppLifecycleState.paused) {
+      _wasInBackground = true;
+    } else if (state == AppLifecycleState.resumed) {
+      if (_wasInBackground) {
+        Modular.to.pushReplacementNamed('/splashscreen');
+      }
+      _wasInBackground = false;
+    }
+  }
+
+  @override
+  void dispose() {
+    WidgetsBinding.instance.removeObserver(this);
+    super.dispose();
   }
 
   @override

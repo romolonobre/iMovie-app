@@ -79,7 +79,7 @@ class CastSection extends StatelessWidget {
                         IUIText.heading(cast.name, fontsize: 9, fontWeight: FontWeight.w700),
                         IUIText.heading(cast.character, fontsize: 9, color: Colors.grey)
                       ],
-                    );
+                    ).paddingOnly(left: index == 0 ? 20 : 0);
                   },
                 ),
               ),

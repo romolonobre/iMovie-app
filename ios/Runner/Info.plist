@@ -17,6 +17,10 @@
     </array>
     <key>NSCameraUsageDescription</key>
 	<string>Update your profile picture.</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+    <string>Your app requires speech recognition to process voice input.</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>Your app needs access to the microphone to record audio.</string>
 	<key>NSFaceIDUsageDescription</key>
     <string>Why is my app authenticating using face id?</string>
     <key>NSPhotoLibraryUsageDescription</key>

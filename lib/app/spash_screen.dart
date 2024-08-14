@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:imovie_app/app/_commons/app_services/utils.dart';
-import 'package:imovie_app/app/_commons/imovie_ui/iui_text.dart';
-import 'package:imovie_app/app/authentication/interactor/login_controller.dart';
 
-import '_commons/app_services/cache.dart';
-import '_commons/entities/app_user.dart';
+import '_commons/app_services/utils.dart';
+import '_commons/imovie_ui/iui_text.dart';
 import '_commons/push_notifications/push_notifications.dart';
+import '_commons/user_status/verify_user_status.dart';
+import 'authentication/interactor/login_controller.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -17,28 +16,14 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-  final service = Modular.get<LoginController>();
+  final controller = Modular.get<LoginController>();
 
   @override
   void initState() {
     super.initState();
-    final user = service.getUser();
-    handleNavigation(user);
-    Future(() async => await PushNotifications.initialize());
-  }
-
-  void handleNavigation(AppUser? user) {
-    bool isLogged = user != null;
-    final String navigatoPath = isLogged ? "home" : "login";
-    bool isBiometricsAuthEnabled = Cache().isBiometricsEnabled() ?? false;
-
-    if (!isLogged) {
-      Modular.to.navigate('/login/');
-    } else if (!isBiometricsAuthEnabled) {
-      Future.delayed(const Duration(seconds: 2)).then((_) => Modular.to.navigate('/$navigatoPath/'));
-    } else {
-      Modular.to.navigate('/biometrics/');
-    }
+    final user = controller.getUser();
+    VerifyUserStatus(user: user, controller: controller);
+    Future(() => PushNotifications.initialize());
   }
 
   @override

@@ -9,7 +9,7 @@ class PushNotifications {
   static Future<void> initialize() async {
     final controller = Modular.get<LoginController>();
 
-    bool isLogged = controller.getUser() != null;
+    bool isLogged = controller.isLogged();
     OneSignal.Debug.setLogLevel(OSLogLevel.verbose);
 
     OneSignal.initialize(Env.oneSignalAPIKey);

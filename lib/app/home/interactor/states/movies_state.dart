@@ -1,4 +1,4 @@
-import '../entities/movie.dart';
+import '../../../_commons/movie/entities/movie.dart';
 
 abstract class MoviesState {}
 

@@ -78,7 +78,7 @@ class MoviesGridSection extends StatelessWidget {
                   itemBuilder: (context, index) {
                     final movie = state.movies[index];
                     return GestureDetector(
-                      onTap: () => Modular.to.pushNamed('./details', arguments: movie),
+                      onTap: () => Modular.to.pushNamed('./details', arguments: movie.id),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -131,7 +131,7 @@ class MoviesGridSection extends StatelessWidget {
                           )
                         ],
                       ),
-                    );
+                    ).paddingOnly(left: index == 0 ? 20 : 0);
                   },
                 ),
               ),

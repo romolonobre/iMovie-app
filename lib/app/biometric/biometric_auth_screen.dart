@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:imovie_app/app/_commons/extensions/extensions.dart';
-import 'package:imovie_app/app/_commons/imovie_ui/iui_snackbar.dart';
-import 'package:imovie_app/app/_commons/imovie_ui/iui_text.dart';
-import 'package:imovie_app/app/biometric/biometric_auth_state.dart';
-import 'package:imovie_app/app/biometric/handle_biometric_auth.dart';
 import 'package:lottie/lottie.dart';
 
 import '../_commons/app_services/utils.dart';
 import '../_commons/imovie_ui/iui_buttons.dart';
+import '../_commons/imovie_ui/iui_snackbar.dart';
+import '../_commons/imovie_ui/iui_text.dart';
+import 'biometric_auth_state.dart';
+import 'handle_biometric_auth.dart';
 
 class BiometricAuthScreen extends StatefulWidget {
   final String? naviagtionPath;
@@ -24,10 +24,10 @@ class _BiometricAuthScreenState extends State<BiometricAuthScreen> {
   @override
   void initState() {
     super.initState();
-    Future(() => _handleAuht());
+    Future(() => _authenticateWithBiometrics());
   }
 
-  _handleAuht() async {
+  _authenticateWithBiometrics() async {
     final state = await _auth.authenticateWithBiometrics();
     if (!mounted) return;
     if (state is BiometricsAuthErrorState) {
@@ -65,7 +65,7 @@ class _BiometricAuthScreenState extends State<BiometricAuthScreen> {
             IUIButtons.text(
               label: "Tap to Log in with Biometrics",
               width: MediaQuery.sizeOf(context).width - 100,
-              onPressed: () async => await _handleAuht(),
+              onPressed: () async => await _authenticateWithBiometrics(),
             ),
 
             // Button to navigate to the login screen if there is an issue with Biometrics

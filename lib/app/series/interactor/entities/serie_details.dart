@@ -1,6 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'package:imovie_app/app/movie_details/interactor/entities/genres.dart';
 
+import '../../../movie_details/interactor/entities/genres.dart';
 import '../../../serie_details/interactor/entities/serie_season.dart';
 
 class SerieDetails {

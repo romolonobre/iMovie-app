@@ -22,6 +22,10 @@ class MovieDetailsDatasource extends APIRequest {
     return await _fetchData("3/movie/$id", tag: "getGenres");
   }
 
+  Future<TMDBApiResponse> getDetails({required String id}) async {
+    return await _fetchData("3/movie/$id", tag: "getDetails");
+  }
+
   Future<TMDBApiResponse> getCast({required String id}) async {
     return await _fetchData("3/movie/$id/credits", tag: "getCast");
   }

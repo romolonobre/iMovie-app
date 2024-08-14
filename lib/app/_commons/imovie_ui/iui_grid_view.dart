@@ -1,5 +1,4 @@
 import 'package:flutter/widgets.dart';
-import 'package:imovie_app/app/_commons/extensions/extensions.dart';
 
 class IUIGridView extends StatelessWidget {
   final int? crossAxisCount;
@@ -34,6 +33,6 @@ class IUIGridView extends StatelessWidget {
       padding: const EdgeInsets.all(0),
       itemCount: itemCount,
       itemBuilder: itemBuilder,
-    ).paddingOnly(left: 10, right: 10);
+    );
   }
 }

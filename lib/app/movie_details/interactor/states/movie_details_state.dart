@@ -1,3 +1,4 @@
+import 'package:imovie_app/app/_commons/movie/entities/movie.dart';
 import 'package:imovie_app/app/movie_details/interactor/entities/cast.dart';
 import 'package:imovie_app/app/movie_details/interactor/entities/review.dart';
 
@@ -13,6 +14,12 @@ class MovieGenreLoadedState extends MovieDetailsState {
   final List<Genre> genre;
 
   MovieGenreLoadedState({required this.genre});
+}
+
+class MovieDetailsLoadedState extends MovieDetailsState {
+  final Movie movie;
+
+  MovieDetailsLoadedState({required this.movie});
 }
 
 class MovieCastLoadedState extends MovieDetailsState {

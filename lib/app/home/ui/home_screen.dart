@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../_commons/app_services/utils.dart';
+import '../../_commons/flutter_widgets/search/search_widget.dart';
 import 'widgets/movies_grid_section.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -18,7 +19,9 @@ class _HomeScreenState extends State<HomeScreen> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            const SizedBox(height: 100),
+            const SizedBox(height: 60),
+            const SearchWidget(),
+            const SizedBox(height: 20),
             MoviesGridSection(
               sectionTitle: "Recently released",
               height: 160,

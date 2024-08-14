@@ -31,9 +31,7 @@ void main() {
       'profile_path': '/profile.jpg',
     };
     test('fromJson returns a valid Cast', () {
-      final adapter = CastAdapter();
-
-      final cast = adapter.fromJson(json);
+      final cast = CastAdapter().fromJson(json);
 
       expect(cast.name, 'Actor Name');
       expect(cast.character, 'Character Name');
@@ -41,9 +39,7 @@ void main() {
     });
 
     test('fromJsonToList returns a list of Cast', () {
-      final adapter = CastAdapter();
-
-      final casts = adapter.fromJsonToList(jsonList);
+      final casts = CastAdapter().fromJsonToList(jsonList);
 
       expect(casts.length, 2);
       expect(casts[0].name, 'Actor Name 1');
@@ -54,17 +50,14 @@ void main() {
       expect(casts[1].image, '$imageBasePath/profile2.jpg');
     });
     test('fromJson should not break if there is any invalid data types', () {
-      final adapter = CastAdapter();
-
-      final cast = adapter.fromJson(invalidJson);
+      final cast = CastAdapter().fromJson(invalidJson);
       expect(cast.name, "2");
       expect(cast.character, "2.4");
       expect(cast.image, '$imageBasePath/profile.jpg');
     });
 
     test('fromJsonToList returns an empty list if json is null', () {
-      final adapter = CastAdapter();
-      final casts = adapter.fromJsonToList(null);
+      final casts = CastAdapter().fromJsonToList(null);
 
       expect(casts, isEmpty);
     });

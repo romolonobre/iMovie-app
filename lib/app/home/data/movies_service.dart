@@ -1,9 +1,9 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'package:imovie_app/app/home/data/adapters/movie_adapter.dart';
-import 'package:imovie_app/app/home/data/movies_datasource.dart';
 
-import '../interactor/entities/movie.dart';
+import '../../_commons/movie/adapters/movie_adapter.dart';
+import '../../_commons/movie/entities/movie.dart';
 import '../interactor/states/movies_state.dart';
+import 'movies_datasource.dart';
 
 class MoviesService {
   MoviesDatasource datasource;

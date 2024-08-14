@@ -39,7 +39,7 @@ class _SeriesCarouselWidgetState extends State<SeriesCarouselWidget> {
     return Column(
       children: [
         SizedBox(
-          height: 340,
+          height: 300,
           child: PageView.builder(
             controller: _pageController,
             itemCount: 8,

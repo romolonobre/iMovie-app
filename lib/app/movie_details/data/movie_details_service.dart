@@ -1,6 +1,8 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:imovie_app/app/_commons/app_services/helper.dart';
+import 'package:imovie_app/app/_commons/movie/adapters/movie_adapter.dart';
 
+import '../../_commons/movie/entities/movie.dart';
 import '../interactor/entities/cast.dart';
 import '../interactor/entities/genres.dart';
 import '../interactor/entities/review.dart';
@@ -14,6 +16,22 @@ class MovieDetailsService {
   MovieDetailsService({
     required this.datasource,
   });
+
+  Future<MovieDetailsState> getDetails({required String id}) async {
+    try {
+      final response = await datasource.getDetails(id: id);
+
+      if (response.hasError) {
+        return MoviesDetailsErrorState(message: response.errorMessage);
+      }
+
+      final Movie movie = MovieAdapter().fromJson(response.data);
+
+      return MovieDetailsLoadedState(movie: movie);
+    } catch (e) {
+      return MoviesDetailsErrorState(message: e.toString());
+    }
+  }
 
   Future<MovieDetailsState> getGenres({required String id}) async {
     try {

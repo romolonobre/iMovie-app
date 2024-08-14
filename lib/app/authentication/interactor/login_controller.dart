@@ -1,6 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 
-import '../../_commons/entities/app_user.dart';
+import '../../_commons/user/entities/app_user.dart';
 import '../data/service/auth_service.dart';
 import 'login_state.dart';
 
@@ -40,4 +40,6 @@ class LoginController {
     final result = await service.signInWithGoogle();
     return result;
   }
+
+  bool isLogged() => service.getCurrentUser() != null;
 }

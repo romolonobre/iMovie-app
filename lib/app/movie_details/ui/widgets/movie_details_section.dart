@@ -4,7 +4,7 @@ import 'package:imovie_app/app/_commons/extensions/extensions.dart';
 
 import '../../../_commons/imovie_ui/iui_loader.dart';
 import '../../../_commons/imovie_ui/iui_text.dart';
-import '../../../home/interactor/entities/movie.dart';
+import '../../../_commons/movie/entities/movie.dart';
 import '../../data/movie_details_service.dart';
 import '../../interactor/states/movie_details_state.dart';
 import 'imdb_review_widget.dart';
