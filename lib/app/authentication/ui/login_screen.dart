@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:imovie_app/app/authentication/ui/register_screen.dart';
 import 'package:imovie_app/app/_commons/extensions/extensions.dart';
+import 'package:imovie_app/app/authentication/ui/register_screen.dart';
 
 import '../../_commons/app_services/utils.dart';
 import '../../_commons/flutter_widgets/imovie_textform_field.dart';
