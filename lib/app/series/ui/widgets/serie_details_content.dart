@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:imovie_app/app/_commons/app_services/utils.dart';
 import 'package:imovie_app/app/_commons/extensions/extensions.dart';
+import 'package:imovie_app/app/_commons/imovie_ui/iui_snackbar.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../../_commons/imovie_ui/iui_buttons.dart';
@@ -109,7 +111,11 @@ class SerieDetailsContentWidget extends StatelessWidget {
                           _launchURL(state.details.homePageLink);
                         },
                       ),
-                      IUIText.heading("(External Link)", fontsize: 10, color: Colors.black).paddingOnly(right: 10)
+                      IUIText.heading(
+                        "(External Link)",
+                        fontsize: 10,
+                        color: Colors.black,
+                      ).paddingOnly(right: 10)
                     ],
                   ),
                 ],
@@ -123,10 +129,14 @@ class SerieDetailsContentWidget extends StatelessWidget {
   }
 
   void _launchURL(String url) async {
-    if (await canLaunchUrl(Uri.parse(url))) {
+    if (await canLaunchUrl(Uri.parse('dsds'))) {
       await launchUrl(Uri.parse(url));
     } else {
-      throw 'Could not launch $url';
+      IUISnackbar.show(
+        navigatorKey.currentContext!,
+        message: "Could not launch $url",
+        isError: true,
+      );
     }
   }
 }
