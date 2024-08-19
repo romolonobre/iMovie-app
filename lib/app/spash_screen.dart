@@ -21,8 +21,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    final user = controller.getUser();
-    VerifyUserStatus(user: user, controller: controller);
+    VerifyUserStatus(controller: controller);
     Future(() => PushNotifications.initialize());
   }
 

@@ -3,16 +3,15 @@ import 'package:flutter_modular/flutter_modular.dart';
 
 import '../../authentication/interactor/login_controller.dart';
 import '../app_services/cache.dart';
-import '../user/entities/app_user.dart';
 
 class VerifyUserStatus {
-  final AppUser? user;
   final LoginController controller;
 
-  VerifyUserStatus({required this.user, required this.controller}) {
+  VerifyUserStatus({required this.controller}) {
     bool isLogged = controller.isLogged();
     final String navigatoPath = isLogged ? "home" : "login";
     bool isBiometricsAuthEnabled = Cache().isBiometricsEnabled() ?? false;
+
     if (!isLogged) {
       Modular.to.navigate('/login/');
     } else if (!isBiometricsAuthEnabled) {
