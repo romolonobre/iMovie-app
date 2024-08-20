@@ -7,15 +7,17 @@ import 'authentication/data/service/firebase_auth_service.dart';
 import 'authentication/interactor/login_controller.dart';
 import 'biometric/biometric_auth_screen.dart';
 import 'home/home_module.dart';
-import 'series/data/series_datasource.dart';
-import 'series/data/series_service.dart';
+import 'series/data/datasource/series_datasource.dart';
+import 'series/data/datasource/series_datasource_impl.dart';
+import 'series/data/service/series_service.dart';
+import 'series/data/service/series_service_impl.dart';
 import 'series/interactor/serie_controller.dart';
 
 class AppModule extends Module {
   @override
   void binds(i) {
-    i.add(SeriesService.new);
-    i.add(SeriesDatasource.new);
+    i.add<SeriesDatasource>(SeriesDatasourceImpl.new);
+    i.add<SeriesService>(SeriesServiceImpl.new);
     i.add(SerieController.new);
 
     // Auth

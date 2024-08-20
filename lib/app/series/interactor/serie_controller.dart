@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../data/series_service.dart';
+import '../data/service/series_service.dart';
 import 'series_states.dart';
 
 class SerieController extends ValueNotifier<SeriesState> {

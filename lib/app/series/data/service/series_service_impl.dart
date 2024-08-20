@@ -1,15 +1,17 @@
-import '../../_commons/app_services/cache.dart';
-import '../interactor/entities/serie_details.dart';
-import '../interactor/series_states.dart';
-import 'adapters/serie_details_adapter.dart';
-import 'adapters/series_adapter.dart';
-import 'series_datasource.dart';
+import '../../../_commons/app_services/cache.dart';
+import '../../interactor/entities/serie_details.dart';
+import '../../interactor/series_states.dart';
+import '../adapters/serie_details_adapter.dart';
+import '../adapters/series_adapter.dart';
+import '../datasource/series_datasource.dart';
+import 'series_service.dart';
 
-class SeriesService {
+class SeriesServiceImpl implements SeriesService {
   final SeriesDatasource datasource;
 
-  SeriesService({required this.datasource});
+  SeriesServiceImpl({required this.datasource});
 
+  @override
   Future<SeriesState> getSeries() async {
     try {
       final response = await datasource.getSeries();
@@ -25,6 +27,7 @@ class SeriesService {
     }
   }
 
+  @override
   Future<SeriesState> getDetails(String id) async {
     try {
       // Check if the genres are already cached

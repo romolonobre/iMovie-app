@@ -10,13 +10,15 @@ import '../../interactor/states/movie_details_state.dart';
 import '../adapters/cast_adpater.dart';
 import '../adapters/reviews_adapter.dart';
 import '../datasource/movie_details_datasource.dart';
+import 'movie_details_service.dart';
 
-class MovieDetailsServiceImpl {
+class MovieDetailsServiceImpl implements MovieDetailsService {
   MovieDetailsDatasource datasource;
   MovieDetailsServiceImpl({
     required this.datasource,
   });
 
+  @override
   Future<MovieDetailsState> getDetails({required String id}) async {
     try {
       final response = await datasource.getDetails(id: id);
@@ -33,6 +35,7 @@ class MovieDetailsServiceImpl {
     }
   }
 
+  @override
   Future<MovieDetailsState> getGenres({required String id}) async {
     try {
       final response = await datasource.getGenres(id: id);
@@ -57,6 +60,7 @@ class MovieDetailsServiceImpl {
     }
   }
 
+  @override
   Future<MovieDetailsState> getCast({required String id}) async {
     try {
       final response = await datasource.getCast(id: id);
@@ -72,6 +76,7 @@ class MovieDetailsServiceImpl {
     }
   }
 
+  @override
   Future<MovieDetailsState> getVideos({required String id}) async {
     try {
       final response = await datasource.getVideos(id: id);
@@ -92,6 +97,7 @@ class MovieDetailsServiceImpl {
     }
   }
 
+  @override
   Future<MovieDetailsState> getPhotos({required String id}) async {
     const String imageBasePath = "https://image.tmdb.org/t/p/w400";
     try {
@@ -115,6 +121,7 @@ class MovieDetailsServiceImpl {
     }
   }
 
+  @override
   Future<MovieDetailsState> getReviews({required String id}) async {
     try {
       final response = await datasource.getReviews(id: id);

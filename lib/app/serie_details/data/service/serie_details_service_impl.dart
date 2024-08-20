@@ -1,14 +1,17 @@
-import '../../_commons/app_services/helper.dart';
-import '../interactor/entities/serie_season.dart';
-import '../interactor/entities/serie_video.dart';
-import '../interactor/serie_details_state.dart';
-import 'adapters/serie_season_adapter.dart';
-import 'serie_details.datasource.dart';
+import 'package:imovie_app/app/serie_details/data/service/serie_details_service.dart';
 
-class SerieDetailsService {
+import '../../../_commons/app_services/helper.dart';
+import '../../interactor/entities/serie_season.dart';
+import '../../interactor/entities/serie_video.dart';
+import '../../interactor/serie_details_state.dart';
+import '../adapters/serie_season_adapter.dart';
+import '../datasource/serie_details_datasource.dart';
+
+class SerieDetailsServiceImpl implements SerieDetailsService {
   final SerieDetailsDatasource datasource;
 
-  SerieDetailsService({required this.datasource});
+  SerieDetailsServiceImpl({required this.datasource});
+  @override
   Future<SerieDetailsState> getSeasons(String id, String seasonNumber) async {
     try {
       final response = await datasource.getSeasons(id, seasonNumber);
@@ -31,6 +34,7 @@ class SerieDetailsService {
     }
   }
 
+  @override
   Future<SerieDetailsState> getSeasonVideos(String id, String seasonNumber) async {
     try {
       final response = await datasource.getSeasonVideos(id, seasonNumber);
