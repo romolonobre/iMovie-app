@@ -38,6 +38,9 @@ class _BiometricAuthScreenState extends State<BiometricAuthScreen> {
       );
       return;
     }
+
+    // If naviagtionPath is not null it means we are opening the app by tapping on push notification
+    // so we will need the correct navigation path to navigate to the correct screen
     if (state is BiometricsAuthSucessState) {
       Modular.to.navigate('/${widget.naviagtionPath ?? 'home'}');
     }

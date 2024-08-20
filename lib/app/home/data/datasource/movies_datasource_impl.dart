@@ -14,7 +14,7 @@ class MoviesDatasourceImpl extends APIRequest implements MoviesDatasource {
       final response = await get(endpoint);
       return TMDBApiResponse(response);
     } catch (error, stackTrace) {
-      Errorhandler.report(error, stackTrace, tag: "MoviesDatasource call");
+      Errorhandler.report(error, stackTrace, tag: "MoviesDatasourceImpl call");
       throw MoviesException(message: "Failed to get movies from $endpoint: ${error.toString()}");
     }
   }

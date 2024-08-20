@@ -26,7 +26,7 @@ class SeriesDatasource extends APIRequest {
       return TMDBApiResponse(response);
     } catch (error, stackTrace) {
       Errorhandler.report(error, stackTrace, tag: "@SeriesDatasource getDetails");
-      throw SerieDetailsException(message: "Failed to get series details: ${error.toString()}");
+      throw SeriesException(message: "Failed to get series details: ${error.toString()}");
     }
   }
 }
