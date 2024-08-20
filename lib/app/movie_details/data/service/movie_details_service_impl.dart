@@ -2,18 +2,18 @@
 import 'package:imovie_app/app/_commons/app_services/helper.dart';
 import 'package:imovie_app/app/_commons/movie/adapters/movie_adapter.dart';
 
-import '../../_commons/movie/entities/movie.dart';
-import '../interactor/entities/cast.dart';
-import '../interactor/entities/genres.dart';
-import '../interactor/entities/review.dart';
-import '../interactor/states/movie_details_state.dart';
-import 'adapters/cast_adpater.dart';
-import 'adapters/reviews_adapter.dart';
-import 'movies_details_datasource.dart';
+import '../../../_commons/movie/entities/movie.dart';
+import '../../interactor/entities/cast.dart';
+import '../../interactor/entities/genres.dart';
+import '../../interactor/entities/review.dart';
+import '../../interactor/states/movie_details_state.dart';
+import '../adapters/cast_adpater.dart';
+import '../adapters/reviews_adapter.dart';
+import '../datasource/movie_details_datasource.dart';
 
-class MovieDetailsService {
+class MovieDetailsServiceImpl {
   MovieDetailsDatasource datasource;
-  MovieDetailsService({
+  MovieDetailsServiceImpl({
     required this.datasource,
   });
 
@@ -117,7 +117,7 @@ class MovieDetailsService {
 
   Future<MovieDetailsState> getReviews({required String id}) async {
     try {
-      final response = await datasource.getreviews(id: id);
+      final response = await datasource.getReviews(id: id);
       if (response.hasError) {
         return MoviesDetailsErrorState(message: response.errorMessage);
       }

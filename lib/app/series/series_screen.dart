@@ -9,7 +9,7 @@ import '../_commons/imovie_ui/iui_loader.dart';
 import '../_commons/imovie_ui/iui_text.dart';
 import 'interactor/serie_controller.dart';
 import 'interactor/series_states.dart';
-import 'ui/widgets/series_carousel_widgetdart';
+import 'ui/widgets/series_carousel_widget.dart';
 
 class SeriesScreen extends StatelessWidget {
   SeriesScreen({super.key});

@@ -4,7 +4,7 @@ import 'package:imovie_app/app/_commons/imovie_ui/iui_loader.dart';
 
 import '../../_commons/app_services/utils.dart';
 import '../../_commons/imovie_ui/iui_buttons.dart';
-import '../data/movie_details_service.dart';
+import '../data/service/movie_details_service.dart';
 import '../interactor/states/movie_details_state.dart';
 import 'widgets/cast_section.dart';
 import 'widgets/movie_details_section.dart';

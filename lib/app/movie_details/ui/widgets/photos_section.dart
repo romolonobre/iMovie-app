@@ -4,7 +4,7 @@ import 'package:imovie_app/app/_commons/extensions/extensions.dart';
 import '../../../_commons/flutter_widgets/shimmer_loading.dart';
 import '../../../_commons/imovie_ui/iui_grid_view.dart';
 import '../../../_commons/imovie_ui/iui_text.dart';
-import '../../data/movie_details_service.dart';
+import '../../data/service/movie_details_service.dart';
 import '../../interactor/states/movie_details_state.dart';
 
 class PhotosSection extends StatelessWidget {

@@ -5,7 +5,7 @@ import 'package:imovie_app/app/_commons/flutter_widgets/shimmer_loading.dart';
 
 import '../../../_commons/imovie_ui/iui_text.dart';
 import '../../../_commons/movie/entities/movie.dart';
-import '../../data/movie_details_service.dart';
+import '../../data/service/movie_details_service.dart';
 import '../../interactor/states/movie_details_state.dart';
 import 'imdb_review_widget.dart';
 import 'movie_reviews_section.dart';
