@@ -11,15 +11,15 @@ import '../../../_commons/user/entities/app_user.dart';
 import '../../../authentication/interactor/login_controller.dart';
 import 'image_picker_option.dart';
 
-class ProfileAvatar extends StatefulWidget {
+class ProfilePicture extends StatefulWidget {
   final LoginController controller;
-  const ProfileAvatar(this.controller, {super.key});
+  const ProfilePicture(this.controller, {super.key});
 
   @override
-  State<ProfileAvatar> createState() => _ProfileAvatarState();
+  State<ProfilePicture> createState() => _ProfilePictureState();
 }
 
-class _ProfileAvatarState extends State<ProfileAvatar> {
+class _ProfilePictureState extends State<ProfilePicture> {
   late AppUser? user;
   final ImagePicker picker = ImagePicker();
 

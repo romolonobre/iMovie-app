@@ -11,7 +11,7 @@ import '../../_commons/imovie_ui/iui_text.dart';
 import '../../_commons/user/entities/app_user.dart';
 import '../../authentication/interactor/login_controller.dart';
 import '../../authentication/interactor/login_state.dart';
-import 'widgets/profile_image.dart';
+import 'widgets/profile_picture.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -39,7 +39,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
               children: [
                 Container(
                   height: 220,
-                  decoration: const BoxDecoration(color: primaryColor),
+                  decoration: const BoxDecoration(
+                    color: primaryColor,
+                  ),
                 ),
                 Positioned(
                   bottom: -60,
@@ -48,11 +50,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   child: Column(
                     children: [
                       const SizedBox(height: 10),
+                      //
+                      // Profile Picture
                       CircleAvatar(
                         radius: 73,
                         child: CircleAvatar(
                           radius: 70,
-                          child: ProfileAvatar(controller),
+                          child: ProfilePicture(controller),
                         ),
                       ),
                     ],
@@ -99,6 +103,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ).paddingOnly(left: 10),
 
             const Spacer(),
+            //
+            // Logout button
             IUIButtons.text(
               width: MediaQuery.sizeOf(context).width - 200,
               label: "Logout",
