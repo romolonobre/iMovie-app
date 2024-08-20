@@ -5,7 +5,7 @@ import 'package:imovie_app/app/_commons/imovie_ui/iui_grid_view.dart';
 import 'package:shimmer/shimmer.dart';
 
 import '../../../_commons/imovie_ui/iui_text.dart';
-import '../../data/movies_service.dart';
+import '../../data/service/movies_service.dart';
 import '../../interactor/states/movies_state.dart';
 import 'imdb_review_widget.dart';
 
@@ -28,7 +28,7 @@ class MoviesGridSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FutureBuilder<MoviesState>(
-      future: service.gelAll(endpoint: endpoint),
+      future: service.getAll(endpoint: endpoint),
       builder: (context, snapshot) {
         final state = snapshot.data;
 
