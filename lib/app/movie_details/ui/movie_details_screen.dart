@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:imovie_app/app/_commons/imovie_ui/iui_loader.dart';
 
 import '../../_commons/app_services/utils.dart';
 import '../../_commons/imovie_ui/iui_buttons.dart';
+import '../../_commons/imovie_ui/iui_loader.dart';
 import '../data/service/movie_details_service.dart';
 import '../interactor/states/movie_details_state.dart';
 import 'widgets/cast_section.dart';
