@@ -45,6 +45,7 @@ class SerieDetailsContentWidget extends StatelessWidget {
           );
         }
 
+        // Loaded State
         if (state is SerieDetailsLoadedState) {
           return Column(
             children: [

@@ -34,80 +34,82 @@ class _MovieDetailsScreenState extends State<MovieDetailsScreen> {
     return Scaffold(
       backgroundColor: backgroundColor,
       body: FutureBuilder<MovieDetailsState>(
-          future: service.getDetails(id: widget.id),
-          builder: (context, snapshot) {
-            final state = snapshot.data;
+        future: service.getDetails(id: widget.id),
+        builder: (context, snapshot) {
+          final state = snapshot.data;
 
-            // Loading state
-            if (snapshot.connectionState == ConnectionState.waiting) {
-              return const Center(
-                child: IUILoader(),
-              );
-            }
-            return Stack(
-              children: [
-                SingleChildScrollView(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      if (state is MovieDetailsLoadedState) ...{
-                        //
-                        // Image header
-                        Container(
-                          height: 310,
-                          decoration: BoxDecoration(
-                            image: DecorationImage(
-                              image: NetworkImage(state.movie.backgroundImage),
-                              fit: BoxFit.cover,
-                            ),
+          // Loading state
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            return const Center(
+              child: IUILoader(),
+            );
+          }
+
+          return Stack(
+            children: [
+              SingleChildScrollView(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    if (state is MovieDetailsLoadedState) ...{
+                      //
+                      // Image header
+                      Container(
+                        height: 310,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                            image: NetworkImage(state.movie.backgroundImage),
+                            fit: BoxFit.cover,
                           ),
                         ),
-
-                        MovieDetailsSection(movie: state.movie),
-                        const SizedBox(height: 20),
-                      },
-
-                      // Divider
-                      SizedBox(
-                        width: MediaQuery.sizeOf(context).width,
-                        child: const Divider(
-                          color: Colors.grey,
-                          thickness: 1,
-                          endIndent: 35,
-                          indent: 35,
-                        ),
                       ),
 
-                      const SizedBox(height: 15),
+                      MovieDetailsSection(movie: state.movie),
+                      const SizedBox(height: 20),
+                    },
 
-                      CastSection(
-                        id: widget.id,
-                        service: service,
+                    // Divider
+                    SizedBox(
+                      width: MediaQuery.sizeOf(context).width,
+                      child: const Divider(
+                        color: Colors.grey,
+                        thickness: 1,
+                        endIndent: 35,
+                        indent: 35,
                       ),
-                      const SizedBox(height: 15),
-                      VideosSection(
-                        id: widget.id,
-                        service: service,
-                      ),
-                      const SizedBox(height: 15),
-                      PhotosSection(
-                        id: widget.id,
-                        service: service,
-                      ),
-                      const SizedBox(height: 30),
-                    ],
-                  ),
+                    ),
+
+                    const SizedBox(height: 15),
+
+                    CastSection(
+                      id: widget.id,
+                      service: service,
+                    ),
+                    const SizedBox(height: 15),
+                    VideosSection(
+                      id: widget.id,
+                      service: service,
+                    ),
+                    const SizedBox(height: 15),
+                    PhotosSection(
+                      id: widget.id,
+                      service: service,
+                    ),
+                    const SizedBox(height: 30),
+                  ],
                 ),
+              ),
 
-                // Back button
-                Positioned(
-                  top: 40,
-                  left: 10,
-                  child: IUIButtons.back(context),
-                ),
-              ],
-            );
-          }),
+              // Back button
+              Positioned(
+                top: 40,
+                left: 10,
+                child: IUIButtons.back(context),
+              ),
+            ],
+          );
+        },
+      ),
     );
   }
 }

@@ -1,7 +1,7 @@
 import 'entities/serie_details.dart';
 import 'entities/series.dart';
 
-abstract class SeriesState {}
+sealed class SeriesState {}
 
 class IdleState extends SeriesState {}
 

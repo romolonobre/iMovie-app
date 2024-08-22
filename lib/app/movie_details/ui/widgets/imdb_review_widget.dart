@@ -9,9 +9,16 @@ class ImdbReviewWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Image.asset("assets/images/imdb-icon.png", height: 12),
+        Image.asset(
+          "assets/images/imdb-icon.png",
+          height: 12,
+        ),
         const SizedBox(width: 5),
-        IUIText.heading("${review.toStringAsFixed(1)}/10", fontsize: 12, color: Colors.amber),
+        IUIText.heading(
+          "${review.toStringAsFixed(1)}/10",
+          fontsize: 12,
+          color: Colors.amber,
+        ),
       ],
     );
   }
