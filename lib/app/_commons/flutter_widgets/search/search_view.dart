@@ -23,7 +23,7 @@ class SearchView extends StatefulWidget {
 }
 
 class _SearchViewState extends State<SearchView> {
-  final controller = CustomSearchController();
+  final controller = Modular.get<CustomSearchController>();
   final SpeechToText voiceToText = SpeechToText();
   final TextEditingController textEditingController = TextEditingController();
   bool isListening = false;

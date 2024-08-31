@@ -6,11 +6,13 @@ import 'search_datasource.dart';
 import 'search_state.dart';
 
 class SearchService {
-  final data = SearchDatasource();
+  final SearchDatasource datasource;
+
+  SearchService({required this.datasource});
 
   Future<SearchState> search(String value) async {
     try {
-      final response = await data(value);
+      final response = await datasource(value);
       List<SearchResult> results = [];
 
       if (response.hasError) {
