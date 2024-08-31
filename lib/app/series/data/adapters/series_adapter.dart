@@ -28,8 +28,5 @@ class SerieAdapter extends EntityAdaptor<Serie> {
   }
 
   @override
-  Map<String, dynamic> toMap(Serie value) {
-    // TODO: implement toMap
-    throw UnimplementedError();
-  }
+  Map<String, dynamic> toMap(Serie value) => {};
 }

@@ -16,7 +16,7 @@ class SeriesDatasourceImpl extends APIRequest implements SeriesDatasource {
       response = await this.get("3/tv/on_the_air");
       return TMDBApiResponse(response);
     } catch (error, stackTrace) {
-      Errorhandler.report(error, stackTrace, tag: "@SeriesDatasource getSeries");
+      Errorhandler.report(error, stackTrace, tag: "@SeriesDatasourceImpl getSeries");
       throw SeriesException(message: "Failed to get series: ${error.toString()}");
     }
   }
@@ -28,7 +28,7 @@ class SeriesDatasourceImpl extends APIRequest implements SeriesDatasource {
       response = await this.get("3/tv/$id");
       return TMDBApiResponse(response);
     } catch (error, stackTrace) {
-      Errorhandler.report(error, stackTrace, tag: "@SeriesDatasource getDetails");
+      Errorhandler.report(error, stackTrace, tag: "@SeriesDatasourceImpl getDetails");
       throw SeriesException(message: "Failed to get series details: ${error.toString()}");
     }
   }

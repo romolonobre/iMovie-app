@@ -11,13 +11,14 @@ class SerieDetails {
   final List<SerieSeason> seasons;
   final List<Genre> genres;
 
-  SerieDetails(
-      {required this.releaseDate,
-      required this.vote,
-      required this.postImage,
-      required this.homePageLink,
-      required this.seasons,
-      required this.genres});
+  SerieDetails({
+    required this.releaseDate,
+    required this.vote,
+    required this.postImage,
+    required this.homePageLink,
+    required this.seasons,
+    required this.genres,
+  });
 
   @override
   String toString() {

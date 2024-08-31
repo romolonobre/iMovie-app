@@ -3,5 +3,9 @@ class SearchResult {
   final String title;
   final String postPath;
 
-  SearchResult({required this.id, required this.title, required this.postPath});
+  SearchResult({
+    required this.id,
+    required this.title,
+    required this.postPath,
+  });
 }
