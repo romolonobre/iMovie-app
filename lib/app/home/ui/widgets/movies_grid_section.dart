@@ -4,10 +4,10 @@ import 'package:imovie_app/app/_commons/extensions/extensions.dart';
 import 'package:imovie_app/app/_commons/imovie_ui/iui_grid_view.dart';
 import 'package:shimmer/shimmer.dart';
 
+import '../../../_commons/flutter_widgets/imdb_review_widget.dart';
 import '../../../_commons/imovie_ui/iui_text.dart';
 import '../../data/service/movies_service.dart';
 import '../../interactor/states/movies_state.dart';
-import 'imdb_review_widget.dart';
 
 class MoviesGridSection extends StatelessWidget {
   final String sectionTitle;

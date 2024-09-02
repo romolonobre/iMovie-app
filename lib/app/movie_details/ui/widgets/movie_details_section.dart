@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:imovie_app/app/_commons/extensions/extensions.dart';
 
+import '../../../_commons/flutter_widgets/imdb_review_widget.dart';
 import '../../../_commons/flutter_widgets/shimmer_loading.dart';
 import '../../../_commons/imovie_ui/iui_text.dart';
 import '../../../_commons/movie/entities/movie.dart';
 import '../../data/service/movie_details_service.dart';
 import '../../interactor/states/movie_details_state.dart';
-import 'imdb_review_widget.dart';
 import 'movie_reviews_section.dart';
 
 class MovieDetailsSection extends StatelessWidget {

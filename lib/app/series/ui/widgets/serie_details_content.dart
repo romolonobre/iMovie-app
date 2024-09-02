@@ -5,10 +5,10 @@ import 'package:imovie_app/app/_commons/extensions/extensions.dart';
 import 'package:imovie_app/app/_commons/imovie_ui/iui_snackbar.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../../../_commons/flutter_widgets/imdb_review_widget.dart';
 import '../../../_commons/imovie_ui/iui_buttons.dart';
 import '../../../_commons/imovie_ui/iui_loader.dart';
 import '../../../_commons/imovie_ui/iui_text.dart';
-import '../../../movie_details/ui/widgets/imdb_review_widget.dart';
 import '../../interactor/serie_controller.dart';
 import '../../interactor/series_states.dart';
 
