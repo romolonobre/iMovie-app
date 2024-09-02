@@ -93,7 +93,6 @@ class _SeriesCarouselWidgetState extends State<SeriesCarouselWidget> {
   void animateToNextPage() {
     _pageController = PageController(initialPage: 0);
 
-    // Start a timer that triggers every 3 seconds.
     _timer = Timer.periodic(const Duration(seconds: 3), (Timer timer) {
       if (_currentPage < _maxPages - 1) {
         _currentPage++;

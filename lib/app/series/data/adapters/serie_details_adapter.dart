@@ -1,5 +1,4 @@
-import 'package:imovie_app/app/_commons/app_services/entity_adaptor.dart';
-
+import '../../../_commons/app_services/entity_adaptor.dart';
 import '../../../_commons/app_services/helper.dart';
 import '../../../movie_details/interactor/entities/genres.dart';
 import '../../../serie_details/data/adapters/serie_season_adapter.dart';
