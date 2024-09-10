@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:imovie_app/app/_commons/app_services/cache.dart';
 import 'package:imovie_app/app/_commons/app_services/error_handle.dart';
 import 'package:imovie_app/app/app.dart';
@@ -24,9 +25,11 @@ void main() async {
     await Cache().init();
 
     runApp(
-      ModularApp(
-        module: AppModule(),
-        child: const App(),
+      ProviderScope(
+        child: ModularApp(
+          module: AppModule(),
+          child: const App(),
+        ),
       ),
     );
   }, (error, stack) {
