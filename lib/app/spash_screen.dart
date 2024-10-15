@@ -1,9 +1,8 @@
-import 'package:app_services/app_services.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:imovie_ui/imovie_ui.dart';
 
-import '_commons/imovie_ui/iui_text.dart';
 import '_commons/push_notifications/push_notifications.dart';
 import '_commons/user_status/verify_user_status.dart';
 import 'authentication/interactor/login_controller.dart';
@@ -28,7 +27,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: backgroundColor,
+      backgroundColor: IUIPalette.backgroundColor,
       body: Stack(
         children: [
           Center(
@@ -37,7 +36,7 @@ class _SplashScreenState extends State<SplashScreen> {
               children: [
                 IUIText.title(
                   "FindIt",
-                  color: primaryColor,
+                  color: IUIPalette.primaryColor,
                   fontsize: 55,
                   fontWeight: FontWeight.w700,
                 ).animate().animate().fade().scale(delay: 500.ms)

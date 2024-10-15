@@ -1,7 +1,6 @@
-import 'package:app_services/src/extensions.dart';
+import 'package:app_services/app_services.dart';
 import 'package:flutter/material.dart';
-
-import 'iui_text.dart';
+import 'package:imovie_ui/imovie_ui.dart';
 
 class IUIButtons {
   static Widget icon({
@@ -14,7 +13,7 @@ class IUIButtons {
     double? height,
   }) {
     return SizedBox(
-      width: width ?? MediaQuery.sizeOf(navigatorKey.currentState!.context).width,
+      width: width ?? MediaQuery.sizeOf(Utils.navigatorKey.currentState!.context).width,
       height: height ?? 40,
       child: ElevatedButton.icon(
         style: ElevatedButton.styleFrom(
@@ -52,7 +51,7 @@ class IUIButtons {
           ),
         ),
         onPressed: onPressed,
-        child: IUIText.heading(label, color: textColor ?? primaryColor, fontWeight: FontWeight.w600),
+        child: IUIText.heading(label, color: textColor ?? IUIPalette.primaryColor, fontWeight: FontWeight.w600),
       ),
     );
   }
@@ -66,11 +65,11 @@ class IUIButtons {
     double? height,
   }) {
     return SizedBox(
-      width: width ?? MediaQuery.sizeOf(navigatorKey.currentState!.context).width,
+      width: width ?? MediaQuery.sizeOf(Utils.navigatorKey.currentState!.context).width,
       height: height ?? 40,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          backgroundColor: onPressed != null ? backgroundColor ?? primaryColor : Colors.white24,
+          backgroundColor: onPressed != null ? backgroundColor ?? IUIPalette.primaryColor : Colors.white24,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10),
           ),
@@ -137,10 +136,3 @@ class IUIButtons {
     );
   }
 }
-
-GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
-
-const primaryColor = Color(0xff8f91f8);
-const String imageBasePath = "https://image.tmdb.org/t/p/w400";
-final DateTime fingerPrint = DateTime.now();
-const backgroundColor = Color(0xff242226);

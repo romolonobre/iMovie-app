@@ -10,8 +10,8 @@ class SerieAdapter extends EntityAdaptor<Serie> {
         name: Helper.getString(json["original_name"]),
         description: Helper.getString(json["overview"]),
         releaseDate: Helper.getString(json["first_air_date"]),
-        backgroundImage: imageBasePath + Helper.getString(json["backdrop_path"]),
-        postImage: imageBasePath + Helper.getString(json["poster_path"]));
+        backgroundImage: Utils.imageBasePath + Helper.getString(json["backdrop_path"]),
+        postImage: Utils.imageBasePath + Helper.getString(json["poster_path"]));
   }
 
   @override

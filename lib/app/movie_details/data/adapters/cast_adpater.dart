@@ -7,7 +7,7 @@ class CastAdapter extends EntityAdaptor<Cast> {
     return Cast(
       name: Helper.getString(json['name']),
       character: Helper.getString(json['character']),
-      image: imageBasePath + Helper.getString(json['profile_path']),
+      image: Utils.imageBasePath + Helper.getString(json['profile_path']),
     );
   }
 

@@ -1,12 +1,10 @@
 import 'dart:io';
 
-import 'package:app_services/app_services.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:imovie_ui/imovie_ui.dart';
 
-import '../../../_commons/imovie_ui/iui_bottom_sheet.dart';
-import '../../../_commons/imovie_ui/iui_text.dart';
 import '../../../_commons/user/entities/app_user.dart';
 import '../../../authentication/interactor/login_controller.dart';
 import 'image_picker_option.dart';
@@ -46,12 +44,12 @@ class _ProfilePictureState extends State<ProfilePicture> {
       children: [
         const Icon(
           Icons.add,
-          color: primaryColor,
+          color: IUIPalette.primaryColor,
           size: 30,
         ),
         IUIText.heading(
           'Add profile picture',
-          color: primaryColor,
+          color: IUIPalette.primaryColor,
           fontsize: 12,
         )
       ],
@@ -68,7 +66,7 @@ class _ProfilePictureState extends State<ProfilePicture> {
           children: [
             IUIText.heading(
               "Upload profile picture",
-              color: primaryColor,
+              color: IUIPalette.primaryColor,
               fontWeight: FontWeight.w500,
               fontsize: 18,
             ),

@@ -1,6 +1,6 @@
 import 'package:app_services/app_services.dart';
 import 'package:flutter/material.dart';
-import 'package:imovie_app/app/_commons/imovie_ui/iui_text.dart';
+import 'package:imovie_ui/imovie_ui.dart';
 
 class ImovieTextformField extends StatefulWidget {
   final String? hintText;

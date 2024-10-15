@@ -10,7 +10,7 @@ class ReviewsAdapter extends EntityAdaptor<Review> {
     return Review(
       name: Helper.getString(details['username']),
       content: Helper.getString(json['content']),
-      avatarUrl: imageBasePath + Helper.getString(details['avatar_path']),
+      avatarUrl: Utils.imageBasePath + Helper.getString(details['avatar_path']),
       rating: Helper.getDouble(details['rating']),
       date: Helper.getString(json["created_at"]),
     );

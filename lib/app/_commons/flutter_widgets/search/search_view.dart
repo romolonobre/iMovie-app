@@ -5,11 +5,10 @@ import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:imovie_app/app/_commons/flutter_widgets/search/search_controller.dart';
+import 'package:imovie_ui/imovie_ui.dart';
 import 'package:speech_to_text/speech_recognition_result.dart';
 import 'package:speech_to_text/speech_to_text.dart';
 
-import '../../imovie_ui/iui_loader.dart';
-import '../../imovie_ui/iui_text.dart';
 import '../hero_dialog/custom_rect_tween.dart';
 import 'seach_result.dart';
 import 'search_state.dart';
@@ -46,7 +45,7 @@ class _SearchViewState extends State<SearchView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: backgroundColor,
+      backgroundColor: IUIPalette.backgroundColor,
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -157,7 +156,7 @@ class _SearchViewState extends State<SearchView> {
       borderRadius: BorderRadius.circular(20),
       child: Container(
         padding: const EdgeInsets.all(15),
-        color: backgroundColor.withOpacity(0.9),
+        color: IUIPalette.primaryColor.withOpacity(0.9),
         child: IUIText.heading("No movies found", color: Colors.white),
       ),
     );
@@ -170,7 +169,7 @@ class _SearchViewState extends State<SearchView> {
       borderRadius: BorderRadius.circular(20),
       child: Container(
         padding: const EdgeInsets.all(15),
-        color: backgroundColor.withOpacity(0.9),
+        color: IUIPalette.primaryColor.withOpacity(0.9),
         child: IUIText.heading(errorMessage, color: Colors.red),
       ),
     );
@@ -191,7 +190,7 @@ class _SearchViewState extends State<SearchView> {
                 errorBuilder: (context, error, stackTrace) => Container(
                   height: 80,
                   width: 100,
-                  decoration: const BoxDecoration(color: backgroundColor),
+                  decoration: const BoxDecoration(color: IUIPalette.primaryColor),
                 ),
               ).borderRadius(8),
               onTap: () {

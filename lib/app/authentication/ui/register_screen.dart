@@ -1,10 +1,9 @@
 import 'package:app_services/app_services.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:imovie_ui/imovie_ui.dart';
 
 import '../../_commons/flutter_widgets/imovie_textform_field.dart';
-import '../../_commons/imovie_ui/iui_buttons.dart';
-import '../../_commons/imovie_ui/iui_text.dart';
 import '../interactor/login_controller.dart';
 import '../interactor/login_state.dart';
 
@@ -26,7 +25,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: backgroundColor,
+      backgroundColor: IUIPalette.backgroundColor,
       body: Stack(
         children: [
           SizedBox(

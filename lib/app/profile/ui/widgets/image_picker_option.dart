@@ -1,8 +1,7 @@
 import 'package:app_services/app_services.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
-
-import '../../../_commons/imovie_ui/iui_text.dart';
+import 'package:imovie_ui/imovie_ui.dart';
 
 class ImagePickerOption extends StatelessWidget {
   final ImageSource source;
@@ -34,14 +33,14 @@ class ImagePickerOption extends StatelessWidget {
           Container(
             height: 100,
             width: 100,
-            color: primaryColor,
+            color: IUIPalette.primaryColor,
             child: Icon(
               icon,
               size: 50,
               color: Colors.white,
             ),
           ).borderRadius(8),
-          IUIText.heading(label, color: primaryColor)
+          IUIText.heading(label, color: IUIPalette.primaryColor)
         ],
       ),
     );

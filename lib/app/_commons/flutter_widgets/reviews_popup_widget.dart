@@ -1,8 +1,8 @@
 import 'package:app_services/app_services.dart';
 import 'package:flutter/material.dart';
 import 'package:imovie_app/app/movie_details/interactor/entities/review.dart';
+import 'package:imovie_ui/imovie_ui.dart';
 
-import '../imovie_ui/iui_text.dart';
 import 'hero_dialog/popup_card_tile.dart';
 
 class ReviewsPopupWidget extends StatelessWidget {

@@ -19,7 +19,7 @@ void main() {
 
       expect(review.name, 'Reviewer1');
       expect(review.content, 'Great movie!');
-      expect(review.avatarUrl, '$imageBasePath/avatar.jpg');
+      expect(review.avatarUrl, '$Utils.imageBasePath/avatar.jpg');
       expect(review.rating, 4.5);
       expect(review.date, '2023-07-17T12:34:56.000Z');
     });
@@ -53,12 +53,12 @@ void main() {
       expect(reviews.length, 2);
       expect(reviews[0].name, 'Reviewer1');
       expect(reviews[0].content, 'Great movie!');
-      expect(reviews[0].avatarUrl, '$imageBasePath/avatar1.jpg');
+      expect(reviews[0].avatarUrl, '$Utils.imageBasePath/avatar1.jpg');
       expect(reviews[0].rating, 4.5);
       expect(reviews[0].date, '2023-07-17T12:34:56.000Z');
       expect(reviews[1].name, 'Reviewer2');
       expect(reviews[1].content, 'It was okay.');
-      expect(reviews[1].avatarUrl, '$imageBasePath/avatar2.jpg');
+      expect(reviews[1].avatarUrl, '$Utils.imageBasePath/avatar2.jpg');
       expect(reviews[1].rating, 3.0);
       expect(reviews[1].date, '2023-07-16T11:22:33.000Z');
     });

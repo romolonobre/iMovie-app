@@ -1,9 +1,9 @@
 import 'package:app_services/app_services.dart';
 import 'package:flutter/material.dart';
+import 'package:imovie_ui/imovie_ui.dart';
 
 import '../../../_commons/flutter_widgets/reviews_popup_widget.dart';
 import '../../../_commons/flutter_widgets/shimmer_loading.dart';
-import '../../../_commons/imovie_ui/iui_text.dart';
 import '../../data/service/movie_details_service.dart';
 import '../../interactor/states/movie_details_state.dart';
 

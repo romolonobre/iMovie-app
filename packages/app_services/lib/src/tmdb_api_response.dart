@@ -15,7 +15,7 @@ class TMDBApiResponse {
   TMDBApiResponse(this.response) {
     debugPrint('''
   --------- API RESPONSE ---------
-  Request Fingerprint: ${fingerPrint.millisecondsSinceEpoch}
+  Request Fingerprint: ${Utils.fingerPrint.millisecondsSinceEpoch}
   Status Code: ${response?.statusCode}
   --------------------------------''');
 

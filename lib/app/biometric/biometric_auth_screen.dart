@@ -1,11 +1,9 @@
 import 'package:app_services/app_services.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:imovie_ui/imovie_ui.dart';
 import 'package:lottie/lottie.dart';
 
-import '../_commons/imovie_ui/iui_buttons.dart';
-import '../_commons/imovie_ui/iui_snackbar.dart';
-import '../_commons/imovie_ui/iui_text.dart';
 import 'biometric_auth_state.dart';
 import 'handle_biometric_auth.dart';
 
@@ -48,7 +46,7 @@ class _BiometricAuthScreenState extends State<BiometricAuthScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: backgroundColor,
+      backgroundColor: IUIPalette.backgroundColor,
       body: SizedBox(
         width: double.infinity,
         child: Column(
@@ -81,7 +79,7 @@ class _BiometricAuthScreenState extends State<BiometricAuthScreen> {
                   onTap: () async => Modular.to.navigate('/login'),
                   child: IUIText.heading(
                     "Sign in",
-                    color: primaryColor,
+                    color: IUIPalette.primaryColor,
                     fontsize: 15,
                   ),
                 ),

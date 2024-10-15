@@ -9,10 +9,10 @@ class MovieAdapter implements EntityAdaptor<Movie> {
       id: Helper.getString(json["id"]),
       title: Helper.getString(json["original_title"]),
       description: Helper.getString(json["overview"]),
-      postImage: imageBasePath + Helper.getString(json["poster_path"]),
+      postImage: Utils.imageBasePath + Helper.getString(json["poster_path"]),
       releaseDate: Helper.getString(json["release_date"]),
       voteAverage: Helper.getDouble(json["vote_average"]),
-      backgroundImage: imageBasePath + Helper.getString(json["backdrop_path"]),
+      backgroundImage: Utils.imageBasePath + Helper.getString(json["backdrop_path"]),
     );
   }
 

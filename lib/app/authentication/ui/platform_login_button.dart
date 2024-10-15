@@ -1,7 +1,6 @@
 import 'package:app_services/app_services.dart';
 import 'package:flutter/material.dart';
-
-import '../../_commons/imovie_ui/iui_text.dart';
+import 'package:imovie_ui/imovie_ui.dart';
 
 class PlatformLoginButton extends StatelessWidget {
   final String icon;

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../imovie_ui/iui_text.dart';
+import 'package:imovie_ui/imovie_ui.dart';
 
 class ImdbReviewWidget extends StatelessWidget {
   final double review;

@@ -24,8 +24,8 @@ class IUILoader extends StatelessWidget {
             child: CircularProgressIndicator(
               strokeWidth: strokeWidth,
               strokeCap: StrokeCap.round,
-              valueColor: const AlwaysStoppedAnimation<Color>(primaryColor),
-              backgroundColor: primaryColor.withOpacity(0.2),
+              valueColor: const AlwaysStoppedAnimation<Color>(IUIPalette.primaryColor),
+              backgroundColor: IUIPalette.primaryColor.withOpacity(0.2),
             ),
           ),
           const SizedBox(height: 20),

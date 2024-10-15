@@ -1,8 +1,8 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:imovie_ui/imovie_ui.dart';
 
-import '../../../_commons/imovie_ui/iui_text.dart';
 import '../../interactor/entities/series.dart';
 import 'page_indicator_widget.dart';
 import 'serie_details_content.dart';

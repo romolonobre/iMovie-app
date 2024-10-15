@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:imovie_app/app/_commons/imovie_ui/iui_text.dart';
+import 'package:imovie_ui/imovie_ui.dart';
 
 import 'custom_rect_tween.dart';
 

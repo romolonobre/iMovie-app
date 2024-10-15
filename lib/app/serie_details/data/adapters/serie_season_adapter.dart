@@ -9,7 +9,7 @@ class SerieSeasonAdapter extends EntityAdaptor<SerieSeason> {
       airDate: Helper.getString(json["air_date"]),
       name: Helper.getString(json["name"]),
       description: Helper.getString(json["overview"]),
-      postImage: imageBasePath + Helper.getString(json["still_path"]),
+      postImage: Utils.imageBasePath + Helper.getString(json["still_path"]),
       voteAverage: Helper.getDouble(json["vote_average"]),
       seasonNumber: Helper.getInt(json["season_number"]),
       episodeCount: Helper.getInt(json["episode_count"]),

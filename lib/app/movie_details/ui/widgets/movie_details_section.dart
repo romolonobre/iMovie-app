@@ -1,10 +1,10 @@
 import 'package:app_services/app_services.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:imovie_ui/imovie_ui.dart';
 
 import '../../../_commons/flutter_widgets/imdb_review_widget.dart';
 import '../../../_commons/flutter_widgets/shimmer_loading.dart';
-import '../../../_commons/imovie_ui/iui_text.dart';
 import '../../../_commons/movie/entities/movie.dart';
 import '../../data/service/movie_details_service.dart';
 import '../../interactor/states/movie_details_state.dart';

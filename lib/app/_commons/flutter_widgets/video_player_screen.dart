@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:imovie_ui/imovie_ui.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
-
-import '../imovie_ui/iui_buttons.dart';
 
 class VideoPlayWidget extends StatefulWidget {
   final String videoId;

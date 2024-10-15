@@ -35,7 +35,7 @@ void main() {
 
       expect(cast.name, 'Actor Name');
       expect(cast.character, 'Character Name');
-      expect(cast.image, '$imageBasePath/profile.jpg');
+      expect(cast.image, '$Utils.imageBasePath/profile.jpg');
     });
 
     test('fromJsonToList returns a list of Cast', () {
@@ -44,16 +44,16 @@ void main() {
       expect(casts.length, 2);
       expect(casts[0].name, 'Actor Name 1');
       expect(casts[0].character, 'Character Name 1');
-      expect(casts[0].image, '$imageBasePath/profile1.jpg');
+      expect(casts[0].image, '$Utils.imageBasePath/profile1.jpg');
       expect(casts[1].name, 'Actor Name 2');
       expect(casts[1].character, 'Character Name 2');
-      expect(casts[1].image, '$imageBasePath/profile2.jpg');
+      expect(casts[1].image, '$Utils.imageBasePath/profile2.jpg');
     });
     test('fromJson should not break if there is any invalid data types', () {
       final cast = CastAdapter().fromJson(invalidJson);
       expect(cast.name, "2");
       expect(cast.character, "2.4");
-      expect(cast.image, '$imageBasePath/profile.jpg');
+      expect(cast.image, '$Utils.imageBasePath/profile.jpg');
     });
 
     test('fromJsonToList returns an empty list if json is null', () {

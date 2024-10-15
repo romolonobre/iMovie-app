@@ -1,6 +1,6 @@
-import 'package:app_services/app_services.dart';
 import 'package:flutter/material.dart';
 import 'package:imovie_app/app/_commons/remote_config/remote_config.dart';
+import 'package:imovie_ui/imovie_ui.dart';
 
 class NavigationBottomBar extends StatefulWidget {
   final List<Widget> screens;
@@ -20,7 +20,7 @@ class _NavigationBottomBarState extends State<NavigationBottomBar> {
         child: Theme(
           data: ThemeData(
             navigationBarTheme: NavigationBarThemeData(
-              indicatorColor: primaryColor,
+              indicatorColor: IUIPalette.primaryColor,
               backgroundColor: Colors.black,
               labelTextStyle: WidgetStateProperty.resolveWith<TextStyle?>(
                 (states) {

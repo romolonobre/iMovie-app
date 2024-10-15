@@ -19,7 +19,7 @@ class APIRequest {
     Map<String, String>? headers,
   }) {
     debugPrint('''  --------- API REQUEST ---------
-  Request Fingerprint: ${fingerPrint.millisecondsSinceEpoch}
+  Request Fingerprint: ${Utils.fingerPrint.millisecondsSinceEpoch}
   Method: get
   URL: $endpoint
   --------------------------------''');
@@ -37,7 +37,7 @@ class APIRequest {
     Map<String, dynamic>? body,
   }) {
     debugPrint('''  --------- API REQUEST ---------
-  Request Fingerprint: ${fingerPrint.millisecondsSinceEpoch}
+  Request Fingerprint: ${Utils.fingerPrint.millisecondsSinceEpoch}
   Method: post
   URL: $endpoint
   Body: $body

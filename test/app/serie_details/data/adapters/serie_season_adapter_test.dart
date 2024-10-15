@@ -63,7 +63,7 @@ void main() {
       expect(season.airDate, '2023-07-17');
       expect(season.name, 'Season 1');
       expect(season.description, 'This is the first season.');
-      expect(season.postImage, '$imageBasePath/image.jpg');
+      expect(season.postImage, '$Utils.imageBasePath/image.jpg');
       expect(season.voteAverage, 8.5);
       expect(season.seasonNumber, 1);
       expect(season.episodeCount, 10);
@@ -80,7 +80,7 @@ void main() {
       expect(seasons[0].airDate, '2023-07-17');
       expect(seasons[0].name, 'Season 1');
       expect(seasons[0].description, 'This is the first season.');
-      expect(seasons[0].postImage, '$imageBasePath/image1.jpg');
+      expect(seasons[0].postImage, '$Utils.imageBasePath/image1.jpg');
       expect(seasons[0].voteAverage, 8.5);
       expect(seasons[0].seasonNumber, 1);
       expect(seasons[0].episodeCount, 10);
@@ -90,7 +90,7 @@ void main() {
       expect(seasons[1].airDate, '2024-07-17');
       expect(seasons[1].name, 'Season 2');
       expect(seasons[1].description, 'This is the second season.');
-      expect(seasons[1].postImage, '$imageBasePath/image2.jpg');
+      expect(seasons[1].postImage, '$Utils.imageBasePath/image2.jpg');
       expect(seasons[1].voteAverage, 9.0);
       expect(seasons[1].seasonNumber, 2);
       expect(seasons[1].episodeCount, 12);
@@ -114,7 +114,7 @@ void main() {
       expect(season.airDate, '12345');
       expect(season.name, '6789.0');
       expect(season.description, '');
-      expect(season.postImage, imageBasePath);
+      expect(season.postImage, Utils.imageBasePath);
       expect(season.voteAverage, 2.4);
       expect(season.seasonNumber, 2);
       expect(season.episodeCount, 0);

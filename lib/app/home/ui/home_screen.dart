@@ -1,5 +1,5 @@
-import 'package:app_services/app_services.dart';
 import 'package:flutter/material.dart';
+import 'package:imovie_ui/imovie_ui.dart';
 
 import '../../_commons/flutter_widgets/search/search_widget.dart';
 import 'widgets/movies_grid_section.dart';
@@ -15,7 +15,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: backgroundColor,
+      backgroundColor: IUIPalette.backgroundColor,
       body: SingleChildScrollView(
         child: Column(
           children: [

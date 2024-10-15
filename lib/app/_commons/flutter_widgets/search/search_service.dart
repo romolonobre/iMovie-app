@@ -21,7 +21,7 @@ class SearchService {
         final SearchResult result = SearchResult(
           id: Helper.getString(e["id"]),
           title: Helper.getString(e["original_title"]),
-          postPath: imageBasePath + Helper.getString(e["backdrop_path"]),
+          postPath: Utils.imageBasePath + Helper.getString(e["backdrop_path"]),
         );
         results.add(result);
       });
