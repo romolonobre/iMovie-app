@@ -1,4 +1,4 @@
 /// A Very Good Project created by Very Good CLI.
 library;
 
-export 'src/app_services.dart';
+export '/app_services.dart';

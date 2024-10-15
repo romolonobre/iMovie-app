@@ -33,6 +33,10 @@ dependencies:
   shared_preferences: ^2.3.1
   avatar_glow: ^3.0.1
   speech_to_text: ^6.6.0
+  app_services:
+    path: packages/app_services
+  imovie_ui:
+    path: packages/imovie_ui
   
   cupertino_icons: ^1.0.2
   
