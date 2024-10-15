@@ -1,10 +1,7 @@
 // ignore_for_file: control_flow_in_finally
 
+import 'package:app_services/app_services.dart';
 import 'package:http/http.dart';
-import 'package:imovie_app/app/_commons/app_services/api_request.dart';
-
-import '../../_commons/app_services/error_handle.dart';
-import '../../_commons/app_services/tmdb_api_response.dart';
 
 class AuthDatasource extends APIRequest {
   // This endpoint is not working at the moment, all parameters are correct but

@@ -1,5 +1,5 @@
+import 'package:app_services/app_services.dart';
 import 'package:flutter/material.dart';
-import 'package:imovie_app/app/_commons/extensions/extensions.dart';
 
 import '../../../_commons/imovie_ui/iui_text.dart';
 import '../../interactor/entities/serie_season.dart';

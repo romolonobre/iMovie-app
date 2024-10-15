@@ -1,9 +1,8 @@
+import 'package:app_services/app_services.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:imovie_app/app/_commons/extensions/extensions.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import '../../../_commons/app_services/utils.dart';
 import '../../../_commons/flutter_widgets/imdb_review_widget.dart';
 import '../../../_commons/imovie_ui/iui_buttons.dart';
 import '../../../_commons/imovie_ui/iui_loader.dart';

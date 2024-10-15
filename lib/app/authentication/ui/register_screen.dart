@@ -1,7 +1,6 @@
+import 'package:app_services/app_services.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:imovie_app/app/_commons/app_services/utils.dart';
-import 'package:imovie_app/app/_commons/extensions/extensions.dart';
 
 import '../../_commons/flutter_widgets/imovie_textform_field.dart';
 import '../../_commons/imovie_ui/iui_buttons.dart';

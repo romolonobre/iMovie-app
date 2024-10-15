@@ -1,10 +1,9 @@
 import 'dart:async';
 
+import 'package:app_services/app_services.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:imovie_app/app/_commons/app_services/cache.dart';
-import 'package:imovie_app/app/_commons/app_services/error_handle.dart';
 import 'package:imovie_app/app/app.dart';
 import 'package:imovie_app/app/app_module.dart';
 import 'package:imovie_app/firebase_options.dart';

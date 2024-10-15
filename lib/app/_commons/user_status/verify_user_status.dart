@@ -1,8 +1,8 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'package:app_services/app_services.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
 import '../../authentication/interactor/login_controller.dart';
-import '../app_services/cache.dart';
 
 class VerifyUserStatus {
   final LoginController controller;

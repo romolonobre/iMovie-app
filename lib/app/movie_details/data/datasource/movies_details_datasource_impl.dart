@@ -1,10 +1,8 @@
 // ignore_for_file: control_flow_in_finally
 
+import 'package:app_services/app_services.dart';
 import 'package:http/http.dart';
 
-import '../../../_commons/app_services/api_request.dart';
-import '../../../_commons/app_services/error_handle.dart';
-import '../../../_commons/app_services/tmdb_api_response.dart';
 import 'movie_details_datasource.dart';
 
 class MovieDetailsDatasourceImpl extends APIRequest implements MovieDetailsDatasource {

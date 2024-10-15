@@ -1,6 +1,6 @@
+import 'package:app_services/app_services.dart';
 import 'package:flutter/material.dart';
 
-import '../../_commons/app_services/utils.dart';
 import '../../_commons/flutter_widgets/search/search_widget.dart';
 import 'widgets/movies_grid_section.dart';
 

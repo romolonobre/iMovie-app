@@ -1,4 +1,3 @@
-import '../../../_commons/app_services/cache.dart';
 import '../../interactor/entities/serie_details.dart';
 import '../../interactor/series_states.dart';
 import '../adapters/serie_details_adapter.dart';
@@ -31,10 +30,10 @@ class SeriesServiceImpl implements SeriesService {
   Future<SeriesState> getDetails(String id) async {
     try {
       // Check if the genres are already cached
-      final cachedDetails = Cache().getDetails(id);
-      if (cachedDetails != null) {
-        return SerieDetailsLoadedState(details: cachedDetails);
-      }
+      // final cachedDetails = Cache().getDetails(id);
+      // if (cachedDetails != null) {
+      //   return SerieDetailsLoadedState(details: cachedDetails);
+      // }
 
       // If not cached, fetch from the datasource
       final response = await datasource.getDetails(id);
@@ -45,7 +44,7 @@ class SeriesServiceImpl implements SeriesService {
       final SerieDetails data = SerieDetailsAdapter().fromJson(response.data);
 
       // Cache the fetched genres
-      Cache().setDetails(id, data);
+      // Cache().setDetails(id, data);
 
       return SerieDetailsLoadedState(details: data);
     } catch (e) {

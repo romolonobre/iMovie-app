@@ -1,8 +1,5 @@
-import 'package:imovie_app/app/_commons/app_services/entity_adaptor.dart';
-import 'package:imovie_app/app/_commons/app_services/helper.dart';
+import 'package:app_services/app_services.dart';
 import 'package:imovie_app/app/movie_details/interactor/entities/cast.dart';
-
-import '../../../_commons/app_services/utils.dart';
 
 class CastAdapter extends EntityAdaptor<Cast> {
   @override

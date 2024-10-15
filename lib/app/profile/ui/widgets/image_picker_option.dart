@@ -1,8 +1,7 @@
+import 'package:app_services/app_services.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:imovie_app/app/_commons/extensions/extensions.dart';
 
-import '../../../_commons/app_services/utils.dart';
 import '../../../_commons/imovie_ui/iui_text.dart';
 
 class ImagePickerOption extends StatelessWidget {

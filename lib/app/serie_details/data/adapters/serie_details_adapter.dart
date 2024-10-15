@@ -1,5 +1,5 @@
-import '../../../_commons/app_services/entity_adaptor.dart';
-import '../../../_commons/app_services/helper.dart';
+import 'package:app_services/app_services.dart';
+
 import '../../../movie_details/interactor/entities/genres.dart';
 import '../../../series/interactor/entities/serie_details.dart';
 import 'serie_season_adapter.dart';

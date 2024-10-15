@@ -1,5 +1,5 @@
+import 'package:app_services/app_services.dart';
 import 'package:flutter/material.dart';
-import 'package:imovie_app/app/_commons/extensions/extensions.dart';
 
 import '../../../_commons/flutter_widgets/reviews_popup_widget.dart';
 import '../../../_commons/flutter_widgets/shimmer_loading.dart';

@@ -1,6 +1,5 @@
-import 'package:imovie_app/app/_commons/app_services/helper.dart';
+import 'package:app_services/app_services.dart';
 
-import '../../app_services/utils.dart';
 import 'seach_result.dart';
 import 'search_datasource.dart';
 import 'search_state.dart';

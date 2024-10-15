@@ -1,9 +1,7 @@
+import 'package:app_services/app_services.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:imovie_app/app/_commons/app_services/env.dart';
 import 'package:imovie_app/app/authentication/interactor/login_controller.dart';
 import 'package:onesignal_flutter/onesignal_flutter.dart';
-
-import '../app_services/cache.dart';
 
 class PushNotifications {
   static Future<void> initialize() async {

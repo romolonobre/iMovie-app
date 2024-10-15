@@ -1,6 +1,6 @@
+import 'package:app_services/app_services.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:imovie_app/app/_commons/extensions/extensions.dart';
 import 'package:imovie_app/app/_commons/imovie_ui/iui_text.dart';
 import 'package:imovie_app/app/serie_details/interactor/serie_details_controller.dart';
 import 'package:imovie_app/app/serie_details/interactor/serie_details_state.dart';

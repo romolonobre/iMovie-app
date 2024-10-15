@@ -1,8 +1,8 @@
+import 'package:app_services/app_services.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
-import '_commons/app_services/utils.dart';
 import '_commons/imovie_ui/iui_text.dart';
 import '_commons/push_notifications/push_notifications.dart';
 import '_commons/user_status/verify_user_status.dart';

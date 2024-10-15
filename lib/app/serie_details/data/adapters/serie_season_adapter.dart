@@ -1,6 +1,5 @@
-import '../../../_commons/app_services/entity_adaptor.dart';
-import '../../../_commons/app_services/helper.dart';
-import '../../../_commons/app_services/utils.dart';
+import 'package:app_services/app_services.dart';
+
 import '../../interactor/entities/serie_season.dart';
 
 class SerieSeasonAdapter extends EntityAdaptor<SerieSeason> {

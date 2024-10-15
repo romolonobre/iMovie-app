@@ -1,6 +1,7 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 
-import '../../../_commons/app_services/helper.dart';
+import 'package:app_services/app_services.dart';
+
 import '../../../_commons/movie/adapters/movie_adapter.dart';
 import '../../../_commons/movie/entities/movie.dart';
 import '../../interactor/entities/cast.dart';

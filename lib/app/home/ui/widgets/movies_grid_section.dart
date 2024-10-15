@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:imovie_app/app/_commons/extensions/extensions.dart';
+import 'package:app_services/app_services.dart';
 import 'package:imovie_app/app/_commons/imovie_ui/iui_grid_view.dart';
 import 'package:shimmer/shimmer.dart';
 

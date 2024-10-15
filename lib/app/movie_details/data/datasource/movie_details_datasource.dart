@@ -1,4 +1,4 @@
-import '../../../_commons/app_services/tmdb_api_response.dart';
+import 'package:app_services/app_services.dart';
 
 abstract class MovieDetailsDatasource {
   Future<TMDBApiResponse> getGenres({required String id});

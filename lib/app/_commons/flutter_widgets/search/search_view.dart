@@ -1,14 +1,13 @@
 import 'dart:async';
 
+import 'package:app_services/app_services.dart';
 import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:imovie_app/app/_commons/extensions/extensions.dart';
 import 'package:imovie_app/app/_commons/flutter_widgets/search/search_controller.dart';
 import 'package:speech_to_text/speech_recognition_result.dart';
 import 'package:speech_to_text/speech_to_text.dart';
 
-import '../../app_services/utils.dart';
 import '../../imovie_ui/iui_loader.dart';
 import '../../imovie_ui/iui_text.dart';
 import '../hero_dialog/custom_rect_tween.dart';

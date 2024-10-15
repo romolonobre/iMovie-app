@@ -1,4 +1,4 @@
-import '../../../_commons/app_services/tmdb_api_response.dart';
+import 'package:app_services/app_services.dart';
 
 abstract class MoviesDatasource {
   Future<TMDBApiResponse> call({required String endpoint});

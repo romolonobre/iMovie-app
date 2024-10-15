@@ -1,7 +1,5 @@
-import 'package:imovie_app/app/_commons/app_services/entity_adaptor.dart';
-import 'package:imovie_app/app/_commons/app_services/helper.dart';
+import 'package:app_services/app_services.dart';
 
-import '../../app_services/utils.dart';
 import '../entities/movie.dart';
 
 class MovieAdapter implements EntityAdaptor<Movie> {

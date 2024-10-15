@@ -1,6 +1,6 @@
+import 'package:app_services/app_services.dart';
 import 'package:imovie_app/app/serie_details/data/service/serie_details_service.dart';
 
-import '../../../_commons/app_services/helper.dart';
 import '../../interactor/entities/serie_season.dart';
 import '../../interactor/entities/serie_video.dart';
 import '../../interactor/serie_details_state.dart';

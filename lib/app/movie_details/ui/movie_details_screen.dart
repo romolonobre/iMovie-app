@@ -1,7 +1,7 @@
+import 'package:app_services/app_services.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
-import '../../_commons/app_services/utils.dart';
 import '../../_commons/imovie_ui/iui_buttons.dart';
 import '../../_commons/imovie_ui/iui_loader.dart';
 import '../data/service/movie_details_service.dart';
