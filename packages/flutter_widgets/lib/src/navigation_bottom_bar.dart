@@ -1,5 +1,5 @@
+import 'package:app_services/src/remote_config/remote_config.dart';
 import 'package:flutter/material.dart';
-import 'package:imovie_app/app/_commons/remote_config/remote_config.dart';
 import 'package:imovie_ui/imovie_ui.dart';
 
 class NavigationBottomBar extends StatefulWidget {

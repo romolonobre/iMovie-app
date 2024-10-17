@@ -1,10 +1,10 @@
+import 'package:app_services/app_services.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:imovie_ui/imovie_ui.dart';
+import 'package:models/models.dart';
 
-import '_commons/push_notifications/push_notifications.dart';
-import '_commons/user_status/verify_user_status.dart';
 import 'authentication/interactor/login_controller.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -20,7 +20,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    VerifyUserStatus(controller: controller);
+    VerifyUserStatus();
     Future(() => PushNotifications.initialize());
   }
 

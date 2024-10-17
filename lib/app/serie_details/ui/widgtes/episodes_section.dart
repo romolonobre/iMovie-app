@@ -2,9 +2,9 @@
 import 'package:app_services/app_services.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:flutter_widgets/flutter_widgets.dart';
 import 'package:imovie_ui/imovie_ui.dart';
 
-import '../../../_commons/flutter_widgets/shimmer_loading.dart';
 import '../../interactor/serie_details_controller.dart';
 import '../../interactor/serie_details_state.dart';
 import 'episode_details_expansion_tile.dart';

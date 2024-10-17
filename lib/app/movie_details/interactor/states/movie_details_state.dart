@@ -1,6 +1,5 @@
-import 'package:imovie_app/app/_commons/movie/entities/movie.dart';
 import 'package:imovie_app/app/movie_details/interactor/entities/cast.dart';
-import 'package:imovie_app/app/movie_details/interactor/entities/review.dart';
+import 'package:models/models.dart';
 
 import '../../../movie_details/interactor/entities/genres.dart';
 

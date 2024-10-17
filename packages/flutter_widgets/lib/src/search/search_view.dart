@@ -4,7 +4,7 @@ import 'package:app_services/app_services.dart';
 import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:imovie_app/app/_commons/flutter_widgets/search/search_controller.dart';
+import 'package:flutter_widgets/src/search/search_controller.dart';
 import 'package:imovie_ui/imovie_ui.dart';
 import 'package:speech_to_text/speech_recognition_result.dart';
 import 'package:speech_to_text/speech_to_text.dart';

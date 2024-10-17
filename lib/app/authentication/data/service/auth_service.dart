@@ -1,4 +1,5 @@
-import '../../../_commons/user/entities/app_user.dart';
+import 'package:models/models.dart';
+
 import '../../interactor/login_state.dart';
 
 // AuthService interface to keep authentication logic flexible and

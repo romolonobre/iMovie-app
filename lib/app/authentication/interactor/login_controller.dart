@@ -1,6 +1,7 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 
-import '../../_commons/user/entities/app_user.dart';
+import 'package:models/models.dart';
+
 import '../data/service/auth_service.dart';
 import 'login_state.dart';
 

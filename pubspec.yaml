@@ -37,6 +37,10 @@ dependencies:
     path: packages/app_services
   imovie_ui:
     path: packages/imovie_ui
+  flutter_widgets:
+    path: packages/flutter_widgets
+  models:
+    path: packages/models  
   
   cupertino_icons: ^1.0.2
   

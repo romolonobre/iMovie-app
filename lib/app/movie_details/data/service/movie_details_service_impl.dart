@@ -1,15 +1,12 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 
 import 'package:app_services/app_services.dart';
+import 'package:models/models.dart';
 
-import '../../../_commons/movie/adapters/movie_adapter.dart';
-import '../../../_commons/movie/entities/movie.dart';
 import '../../interactor/entities/cast.dart';
 import '../../interactor/entities/genres.dart';
-import '../../interactor/entities/review.dart';
 import '../../interactor/states/movie_details_state.dart';
 import '../adapters/cast_adpater.dart';
-import '../adapters/reviews_adapter.dart';
 import '../datasource/movie_details_datasource.dart';
 import 'movie_details_service.dart';
 

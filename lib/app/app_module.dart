@@ -1,8 +1,6 @@
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:flutter_widgets/flutter_widgets.dart';
 
-import '_commons/flutter_widgets/search/search_controller.dart';
-import '_commons/flutter_widgets/search/search_datasource.dart';
-import '_commons/flutter_widgets/search/search_service.dart';
 import 'authentication/data/service/auth_service.dart';
 import 'authentication/data/service/firebase_auth_service.dart';
 import 'authentication/interactor/login_controller.dart';

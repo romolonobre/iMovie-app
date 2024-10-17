@@ -1,6 +1,5 @@
 import 'package:app_services/app_services.dart';
-
-import '../../interactor/entities/review.dart';
+import 'package:models/src/review/review.dart';
 
 class ReviewsAdapter extends EntityAdaptor<Review> {
   @override

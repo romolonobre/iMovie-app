@@ -1,10 +1,10 @@
 import 'package:app_services/app_services.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:flutter_widgets/flutter_widgets.dart';
 import 'package:imovie_app/app/authentication/ui/register_screen.dart';
 import 'package:imovie_ui/imovie_ui.dart';
 
-import '../../_commons/flutter_widgets/imovie_textform_field.dart';
 import '../interactor/login_controller.dart';
 import '../interactor/login_state.dart';
 import 'platform_login_button.dart';

@@ -1,8 +1,8 @@
 import 'package:app_services/app_services.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:models/models.dart';
 
-import '../../../_commons/user/entities/app_user.dart';
 import '../../interactor/login_state.dart';
 import 'auth_service.dart';
 
@@ -56,8 +56,9 @@ class FirebaseAuthService implements AuthService {
   Future<void> updateProfileImage(String image) async => await _auth.currentUser?.updatePhotoURL(image);
 
   // Get user
+
   @override
-  AppUser? getCurrentUser() => _parseUser(_auth.currentUser);
+  AppUser? getCurrentUser() => AppUser.getCurrentUser();
 
   // Send email Verification
   @override
@@ -72,18 +73,6 @@ class FirebaseAuthService implements AuthService {
   Future<LoginState> signOut() async {
     await _auth.signOut();
     return SignOutState();
-  }
-
-  AppUser? _parseUser(User? user) {
-    return user != null
-        ? AppUser(
-            userId: user.uid,
-            email: user.email ?? '',
-            isEmailVerifed: user.emailVerified,
-            name: user.displayName ?? '',
-            imageUrl: user.photoURL ?? '',
-          )
-        : null;
   }
 
   AuthErrorState _handleFirebaseAuthException(FirebaseAuthException e) {

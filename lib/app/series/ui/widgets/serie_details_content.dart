@@ -1,10 +1,10 @@
 import 'package:app_services/app_services.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:flutter_widgets/flutter_widgets.dart';
 import 'package:imovie_ui/imovie_ui.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import '../../../_commons/flutter_widgets/imdb_review_widget.dart';
 import '../../interactor/serie_controller.dart';
 import '../../interactor/series_states.dart';
 

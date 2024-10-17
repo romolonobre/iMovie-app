@@ -1,14 +1,11 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:app_services/app_services.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-
-import '../../authentication/interactor/login_controller.dart';
+import 'package:models/src/user/app_user.dart';
 
 class VerifyUserStatus {
-  final LoginController controller;
-
-  VerifyUserStatus({required this.controller}) {
-    bool isLogged = controller.isLogged();
+  VerifyUserStatus() {
+    bool isLogged = AppUser.getCurrentUser() != null;
     final String navigatoPath = isLogged ? "home" : "login";
     bool isBiometricsAuthEnabled = Cache().isBiometricsEnabled() ?? false;
 

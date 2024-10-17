@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_widgets/flutter_widgets.dart';
 import 'package:imovie_ui/imovie_ui.dart';
 
-import '../../_commons/flutter_widgets/search/search_widget.dart';
 import 'widgets/movies_grid_section.dart';
 
 class HomeScreen extends StatefulWidget {

@@ -8,9 +8,6 @@ import 'package:imovie_app/app/app.dart';
 import 'package:imovie_app/app/app_module.dart';
 import 'package:imovie_app/firebase_options.dart';
 
-import 'app/_commons/firebase_crashlitcs/custom_firebase_crashlitics.dart';
-import 'app/_commons/remote_config/remote_config.dart';
-
 void main() async {
   runZonedGuarded(() async {
     WidgetsFlutterBinding.ensureInitialized();

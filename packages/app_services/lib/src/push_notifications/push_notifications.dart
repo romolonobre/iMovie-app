@@ -1,13 +1,12 @@
 import 'package:app_services/app_services.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:imovie_app/app/authentication/interactor/login_controller.dart';
 import 'package:onesignal_flutter/onesignal_flutter.dart';
 
 class PushNotifications {
   static Future<void> initialize() async {
-    final controller = Modular.get<LoginController>();
+    // final controller = Modular.get<LoginController>();
 
-    bool isLogged = controller.isLogged();
+    // bool isLogged = controller.isLogged();
     OneSignal.Debug.setLogLevel(OSLogLevel.verbose);
 
     OneSignal.initialize(Env.oneSignalAPIKey);
@@ -15,10 +14,10 @@ class PushNotifications {
 
     // Send tags to create 2 different segments
     // The notificaion will be send based on the tags
-    OneSignal.User.addTags({
-      "logged_in": isLogged,
-      "logged_out": !isLogged,
-    });
+    // OneSignal.User.addTags({
+    //   "logged_in": isLogged,
+    //   "logged_out": !isLogged,
+    // });
 
     bool isBiometricsAuthEnabled = Cache().isBiometricsEnabled() ?? false;
 

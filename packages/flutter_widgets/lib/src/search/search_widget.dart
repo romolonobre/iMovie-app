@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:imovie_app/app/_commons/flutter_widgets/hero_dialog/hero_dialog_route.dart';
-import 'package:imovie_app/app/_commons/flutter_widgets/search/search_view.dart';
+import 'package:flutter_widgets/src/search/search_view.dart';
 
 import '../hero_dialog/custom_rect_tween.dart';
+import '../hero_dialog/hero_dialog_route.dart';
 
 class SearchWidget extends StatefulWidget {
   const SearchWidget({super.key});

@@ -1,4 +1,4 @@
-import '../../../_commons/movie/entities/movie.dart';
+import 'package:models/models.dart';
 
 abstract class MoviesState {}
 
